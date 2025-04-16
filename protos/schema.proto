@@ -1,0 +1,101 @@
+syntax = "proto3";
+package schema;
+
+message Identifier {
+  string name = 1;
+  string uri = 2;
+}
+
+message DartType {
+  string name = 1;
+  bool is_future = 2;
+  bool is_future_or = 3;
+  bool is_stream = 4;
+  bool is_bool = 5;
+  bool is_double = 6;
+  bool is_enum = 7;
+  bool is_function = 8;
+  bool is_int = 9;
+  bool is_iterable = 10;
+  bool is_list = 11;
+  bool is_map = 12;
+  bool is_null = 13;
+  bool is_num = 14;
+  bool is_object = 15;
+  bool is_record = 16;
+  bool is_set = 17;
+  bool is_string = 18;
+  bool is_symbol = 19;
+  bool is_type = 20;
+  bool nullable = 21;
+  string uri = 22;
+}
+
+message ParameterElement {
+  string name = 1;
+  bool is_named = 2;
+  bool is_optional = 3;
+  bool is_positional = 4;
+  bool is_required = 5;
+  repeated ParameterElement parameters = 6;
+  DartType type = 7;
+}
+
+message Element{
+  oneof element {
+    ClassElement class = 1;
+    FunctionElement function = 2;
+  }
+  string uri = 3;
+}
+
+message ClassElement{
+  string name = 1;
+  string is_abstract = 2;
+  string is_base = 3;
+  string is_final = 4;
+  string is_interface = 5;
+  string is_mixin = 6;
+  string is_sealed = 7;
+  repeated Identifier interfaces = 8;
+  repeated Identifier mixins = 9;
+  Identifier super_class = 10;
+  repeated ConstructorElement constructors = 11;
+  repeated FieldElement fields = 12;
+  repeated FunctionElement methods = 13;
+  repeated ParameterElement getters = 14;
+  repeated ParameterElement setters = 15;
+  repeated FieldElement static_fields = 16;
+  repeated FunctionElement static_methods = 17;
+  repeated ParameterElement static_getters = 18;
+  repeated ParameterElement static_setters = 19;
+}
+
+message ConstructorElement{
+  string name = 1;
+  bool is_const = 2;
+  repeated ParameterElement parameters = 3;
+}
+
+message FieldElement{
+  string name = 1;
+  bool is_const = 2;
+  bool is_late = 3;
+  bool is_final = 4;
+  DartType type = 5;
+}
+
+message FunctionElement{
+  string name = 1;
+  repeated ParameterElement parameters = 2;
+  DartType return_type = 3;
+  bool is_abstract = 4;
+  bool is_async = 5;
+}
+
+message LibraryElement{
+  string uri = 1;
+  repeated LibraryElement imported_libraries = 2;
+  repeated LibraryElement exported_libraries = 3;
+  repeated Element top_level_elements = 4;
+}

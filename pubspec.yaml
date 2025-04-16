@@ -1,0 +1,22 @@
+name: dart_ast_proto
+description: "A Flutter package that specify the proto schema for resolved dart ast."
+version: 0.1.4
+homepage:
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  protobuf: 3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  protoc_plugin: ^21.1.2
+
+flutter:
+
