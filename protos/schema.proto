@@ -7,7 +7,7 @@ message Identifier {
 }
 
 message DartType {
-  string name = 1;
+  Identifier identifier = 1;
   bool is_future = 2;
   bool is_future_or = 3;
   bool is_stream = 4;
@@ -28,7 +28,6 @@ message DartType {
   bool is_symbol = 19;
   bool is_type = 20;
   bool nullable = 21;
-  string uri = 22;
 }
 
 message ParameterElement {
@@ -46,17 +45,16 @@ message Element{
     ClassElement class = 1;
     FunctionElement function = 2;
   }
-  string uri = 3;
 }
 
 message ClassElement{
-  string name = 1;
-  string is_abstract = 2;
-  string is_base = 3;
-  string is_final = 4;
-  string is_interface = 5;
-  string is_mixin = 6;
-  string is_sealed = 7;
+  Identifier identifier = 1;
+  bool is_abstract = 2;
+  bool is_base = 3;
+  bool is_final = 4;
+  bool is_interface = 5;
+  bool is_mixin = 6;
+  bool is_sealed = 7;
   repeated Identifier interfaces = 8;
   repeated Identifier mixins = 9;
   Identifier super_class = 10;
@@ -86,7 +84,7 @@ message FieldElement{
 }
 
 message FunctionElement{
-  string name = 1;
+  Identifier identifier = 1;
   repeated ParameterElement parameters = 2;
   DartType return_type = 3;
   bool is_abstract = 4;

@@ -72,7 +72,7 @@ class Identifier extends $pb.GeneratedMessage {
 
 class DartType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DartType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFuture')
     ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFutureOr')
     ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isStream')
@@ -93,13 +93,12 @@ class DartType extends $pb.GeneratedMessage {
     ..aOB(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSymbol')
     ..aOB(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isType')
     ..aOB(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nullable')
-    ..aOS(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uri')
     ..hasRequiredFields = false
   ;
 
   DartType._() : super();
   factory DartType({
-    $core.String? name,
+    Identifier? identifier,
     $core.bool? isFuture,
     $core.bool? isFutureOr,
     $core.bool? isStream,
@@ -120,11 +119,10 @@ class DartType extends $pb.GeneratedMessage {
     $core.bool? isSymbol,
     $core.bool? isType,
     $core.bool? nullable,
-    $core.String? uri,
   }) {
     final _result = create();
-    if (name != null) {
-      _result.name = name;
+    if (identifier != null) {
+      _result.identifier = identifier;
     }
     if (isFuture != null) {
       _result.isFuture = isFuture;
@@ -186,9 +184,6 @@ class DartType extends $pb.GeneratedMessage {
     if (nullable != null) {
       _result.nullable = nullable;
     }
-    if (uri != null) {
-      _result.uri = uri;
-    }
     return _result;
   }
   factory DartType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
@@ -213,13 +208,15 @@ class DartType extends $pb.GeneratedMessage {
   static DartType? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
+  Identifier get identifier => $_getN(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set identifier(Identifier v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
+  $core.bool hasIdentifier() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearIdentifier() => clearField(1);
+  @$pb.TagNumber(1)
+  Identifier ensureIdentifier() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.bool get isFuture => $_getBF(1);
@@ -400,15 +397,6 @@ class DartType extends $pb.GeneratedMessage {
   $core.bool hasNullable() => $_has(20);
   @$pb.TagNumber(21)
   void clearNullable() => clearField(21);
-
-  @$pb.TagNumber(22)
-  $core.String get uri => $_getSZ(21);
-  @$pb.TagNumber(22)
-  set uri($core.String v) { $_setString(21, v); }
-  @$pb.TagNumber(22)
-  $core.bool hasUri() => $_has(21);
-  @$pb.TagNumber(22)
-  void clearUri() => clearField(22);
 }
 
 class ParameterElement extends $pb.GeneratedMessage {
@@ -554,7 +542,6 @@ class Element extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<ClassElement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'class', subBuilder: ClassElement.create)
     ..aOM<FunctionElement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: FunctionElement.create)
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uri')
     ..hasRequiredFields = false
   ;
 
@@ -562,7 +549,6 @@ class Element extends $pb.GeneratedMessage {
   factory Element({
     ClassElement? class_1,
     FunctionElement? function,
-    $core.String? uri,
   }) {
     final _result = create();
     if (class_1 != null) {
@@ -570,9 +556,6 @@ class Element extends $pb.GeneratedMessage {
     }
     if (function != null) {
       _result.function = function;
-    }
-    if (uri != null) {
-      _result.uri = uri;
     }
     return _result;
   }
@@ -621,26 +604,17 @@ class Element extends $pb.GeneratedMessage {
   void clearFunction() => clearField(2);
   @$pb.TagNumber(2)
   FunctionElement ensureFunction() => $_ensure(1);
-
-  @$pb.TagNumber(3)
-  $core.String get uri => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set uri($core.String v) { $_setString(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasUri() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearUri() => clearField(3);
 }
 
 class ClassElement extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClassElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBase')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isInterface')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isMixin')
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSealed')
+    ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBase')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isInterface')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isMixin')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSealed')
     ..pc<Identifier>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'interfaces', $pb.PbFieldType.PM, subBuilder: Identifier.create)
     ..pc<Identifier>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mixins', $pb.PbFieldType.PM, subBuilder: Identifier.create)
     ..aOM<Identifier>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'superClass', subBuilder: Identifier.create)
@@ -658,13 +632,13 @@ class ClassElement extends $pb.GeneratedMessage {
 
   ClassElement._() : super();
   factory ClassElement({
-    $core.String? name,
-    $core.String? isAbstract,
-    $core.String? isBase,
-    $core.String? isFinal,
-    $core.String? isInterface,
-    $core.String? isMixin,
-    $core.String? isSealed,
+    Identifier? identifier,
+    $core.bool? isAbstract,
+    $core.bool? isBase,
+    $core.bool? isFinal,
+    $core.bool? isInterface,
+    $core.bool? isMixin,
+    $core.bool? isSealed,
     $core.Iterable<Identifier>? interfaces,
     $core.Iterable<Identifier>? mixins,
     Identifier? superClass,
@@ -679,8 +653,8 @@ class ClassElement extends $pb.GeneratedMessage {
     $core.Iterable<ParameterElement>? staticSetters,
   }) {
     final _result = create();
-    if (name != null) {
-      _result.name = name;
+    if (identifier != null) {
+      _result.identifier = identifier;
     }
     if (isAbstract != null) {
       _result.isAbstract = isAbstract;
@@ -760,63 +734,65 @@ class ClassElement extends $pb.GeneratedMessage {
   static ClassElement? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
+  Identifier get identifier => $_getN(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set identifier(Identifier v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
+  $core.bool hasIdentifier() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearIdentifier() => clearField(1);
+  @$pb.TagNumber(1)
+  Identifier ensureIdentifier() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.String get isAbstract => $_getSZ(1);
+  $core.bool get isAbstract => $_getBF(1);
   @$pb.TagNumber(2)
-  set isAbstract($core.String v) { $_setString(1, v); }
+  set isAbstract($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasIsAbstract() => $_has(1);
   @$pb.TagNumber(2)
   void clearIsAbstract() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get isBase => $_getSZ(2);
+  $core.bool get isBase => $_getBF(2);
   @$pb.TagNumber(3)
-  set isBase($core.String v) { $_setString(2, v); }
+  set isBase($core.bool v) { $_setBool(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasIsBase() => $_has(2);
   @$pb.TagNumber(3)
   void clearIsBase() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get isFinal => $_getSZ(3);
+  $core.bool get isFinal => $_getBF(3);
   @$pb.TagNumber(4)
-  set isFinal($core.String v) { $_setString(3, v); }
+  set isFinal($core.bool v) { $_setBool(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasIsFinal() => $_has(3);
   @$pb.TagNumber(4)
   void clearIsFinal() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get isInterface => $_getSZ(4);
+  $core.bool get isInterface => $_getBF(4);
   @$pb.TagNumber(5)
-  set isInterface($core.String v) { $_setString(4, v); }
+  set isInterface($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasIsInterface() => $_has(4);
   @$pb.TagNumber(5)
   void clearIsInterface() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get isMixin => $_getSZ(5);
+  $core.bool get isMixin => $_getBF(5);
   @$pb.TagNumber(6)
-  set isMixin($core.String v) { $_setString(5, v); }
+  set isMixin($core.bool v) { $_setBool(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasIsMixin() => $_has(5);
   @$pb.TagNumber(6)
   void clearIsMixin() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get isSealed => $_getSZ(6);
+  $core.bool get isSealed => $_getBF(6);
   @$pb.TagNumber(7)
-  set isSealed($core.String v) { $_setString(6, v); }
+  set isSealed($core.bool v) { $_setBool(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasIsSealed() => $_has(6);
   @$pb.TagNumber(7)
@@ -1043,7 +1019,7 @@ class FieldElement extends $pb.GeneratedMessage {
 
 class FunctionElement extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FunctionElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
     ..pc<ParameterElement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
     ..aOM<DartType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'returnType', subBuilder: DartType.create)
     ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
@@ -1053,15 +1029,15 @@ class FunctionElement extends $pb.GeneratedMessage {
 
   FunctionElement._() : super();
   factory FunctionElement({
-    $core.String? name,
+    Identifier? identifier,
     $core.Iterable<ParameterElement>? parameters,
     DartType? returnType,
     $core.bool? isAbstract,
     $core.bool? isAsync,
   }) {
     final _result = create();
-    if (name != null) {
-      _result.name = name;
+    if (identifier != null) {
+      _result.identifier = identifier;
     }
     if (parameters != null) {
       _result.parameters.addAll(parameters);
@@ -1099,13 +1075,15 @@ class FunctionElement extends $pb.GeneratedMessage {
   static FunctionElement? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
+  Identifier get identifier => $_getN(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set identifier(Identifier v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
+  $core.bool hasIdentifier() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearIdentifier() => clearField(1);
+  @$pb.TagNumber(1)
+  Identifier ensureIdentifier() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<ParameterElement> get parameters => $_getList(1);
