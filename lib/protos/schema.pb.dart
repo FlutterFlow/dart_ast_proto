@@ -1384,8 +1384,8 @@ class FunctionElement extends $pb.GeneratedMessage {
 class LibraryElement extends $pb.GeneratedMessage {
   factory LibraryElement({
     $core.String? uri,
-    $core.Iterable<LibraryElement>? importedLibraries,
-    $core.Iterable<LibraryElement>? exportedLibraries,
+    $core.Iterable<$core.String>? importedLibraries,
+    $core.Iterable<$core.String>? exportedLibraries,
     $core.Iterable<Element>? topLevelElements,
   }) {
     final $result = create();
@@ -1409,8 +1409,8 @@ class LibraryElement extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LibraryElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uri')
-    ..pc<LibraryElement>(2, _omitFieldNames ? '' : 'importedLibraries', $pb.PbFieldType.PM, subBuilder: LibraryElement.create)
-    ..pc<LibraryElement>(3, _omitFieldNames ? '' : 'exportedLibraries', $pb.PbFieldType.PM, subBuilder: LibraryElement.create)
+    ..pPS(2, _omitFieldNames ? '' : 'importedLibraries')
+    ..pPS(3, _omitFieldNames ? '' : 'exportedLibraries')
     ..pc<Element>(4, _omitFieldNames ? '' : 'topLevelElements', $pb.PbFieldType.PM, subBuilder: Element.create)
     ..hasRequiredFields = false
   ;
@@ -1446,10 +1446,10 @@ class LibraryElement extends $pb.GeneratedMessage {
   void clearUri() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<LibraryElement> get importedLibraries => $_getList(1);
+  $pb.PbList<$core.String> get importedLibraries => $_getList(1);
 
   @$pb.TagNumber(3)
-  $pb.PbList<LibraryElement> get exportedLibraries => $_getList(2);
+  $pb.PbList<$core.String> get exportedLibraries => $_getList(2);
 
   @$pb.TagNumber(4)
   $pb.PbList<Element> get topLevelElements => $_getList(3);

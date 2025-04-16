@@ -278,17 +278,16 @@ const LibraryElement$json = {
   '1': 'LibraryElement',
   '2': [
     {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
-    {'1': 'imported_libraries', '3': 2, '4': 3, '5': 11, '6': '.schema.LibraryElement', '10': 'importedLibraries'},
-    {'1': 'exported_libraries', '3': 3, '4': 3, '5': 11, '6': '.schema.LibraryElement', '10': 'exportedLibraries'},
+    {'1': 'imported_libraries', '3': 2, '4': 3, '5': 9, '10': 'importedLibraries'},
+    {'1': 'exported_libraries', '3': 3, '4': 3, '5': 9, '10': 'exportedLibraries'},
     {'1': 'top_level_elements', '3': 4, '4': 3, '5': 11, '6': '.schema.Element', '10': 'topLevelElements'},
   ],
 };
 
 /// Descriptor for `LibraryElement`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List libraryElementDescriptor = $convert.base64Decode(
-    'Cg5MaWJyYXJ5RWxlbWVudBIQCgN1cmkYASABKAlSA3VyaRJFChJpbXBvcnRlZF9saWJyYXJpZX'
-    'MYAiADKAsyFi5zY2hlbWEuTGlicmFyeUVsZW1lbnRSEWltcG9ydGVkTGlicmFyaWVzEkUKEmV4'
-    'cG9ydGVkX2xpYnJhcmllcxgDIAMoCzIWLnNjaGVtYS5MaWJyYXJ5RWxlbWVudFIRZXhwb3J0ZW'
-    'RMaWJyYXJpZXMSPQoSdG9wX2xldmVsX2VsZW1lbnRzGAQgAygLMg8uc2NoZW1hLkVsZW1lbnRS'
-    'EHRvcExldmVsRWxlbWVudHM=');
+    'Cg5MaWJyYXJ5RWxlbWVudBIQCgN1cmkYASABKAlSA3VyaRItChJpbXBvcnRlZF9saWJyYXJpZX'
+    'MYAiADKAlSEWltcG9ydGVkTGlicmFyaWVzEi0KEmV4cG9ydGVkX2xpYnJhcmllcxgDIAMoCVIR'
+    'ZXhwb3J0ZWRMaWJyYXJpZXMSPQoSdG9wX2xldmVsX2VsZW1lbnRzGAQgAygLMg8uc2NoZW1hLk'
+    'VsZW1lbnRSEHRvcExldmVsRWxlbWVudHM=');
 

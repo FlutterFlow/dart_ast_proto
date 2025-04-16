@@ -114,7 +114,7 @@ message FunctionElement{
 
 message LibraryElement{
   string uri = 1;
-  repeated LibraryElement imported_libraries = 2;
-  repeated LibraryElement exported_libraries = 3;
+  repeated string imported_libraries = 2;
+  repeated string exported_libraries = 3;
   repeated Element top_level_elements = 4;
 }
