@@ -191,12 +191,12 @@ const ClassElement$json = {
     {'1': 'constructors', '3': 11, '4': 3, '5': 11, '6': '.schema.ConstructorElement', '10': 'constructors'},
     {'1': 'fields', '3': 12, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'fields'},
     {'1': 'methods', '3': 13, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'methods'},
-    {'1': 'getters', '3': 14, '4': 3, '5': 11, '6': '.schema.ParameterElement', '10': 'getters'},
-    {'1': 'setters', '3': 15, '4': 3, '5': 11, '6': '.schema.ParameterElement', '10': 'setters'},
+    {'1': 'getters', '3': 14, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'getters'},
+    {'1': 'setters', '3': 15, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'setters'},
     {'1': 'static_fields', '3': 16, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticFields'},
     {'1': 'static_methods', '3': 17, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'staticMethods'},
-    {'1': 'static_getters', '3': 18, '4': 3, '5': 11, '6': '.schema.ParameterElement', '10': 'staticGetters'},
-    {'1': 'static_setters', '3': 19, '4': 3, '5': 11, '6': '.schema.ParameterElement', '10': 'staticSetters'},
+    {'1': 'static_getters', '3': 18, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'staticGetters'},
+    {'1': 'static_setters', '3': 19, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'staticSetters'},
   ],
 };
 
@@ -211,14 +211,13 @@ final $typed_data.Uint8List classElementDescriptor = $convert.base64Decode(
     'aXhpbnMSMwoLc3VwZXJfY2xhc3MYCiABKAsyEi5zY2hlbWEuSWRlbnRpZmllclIKc3VwZXJDbG'
     'FzcxI+Cgxjb25zdHJ1Y3RvcnMYCyADKAsyGi5zY2hlbWEuQ29uc3RydWN0b3JFbGVtZW50Ugxj'
     'b25zdHJ1Y3RvcnMSLAoGZmllbGRzGAwgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFIGZmllbG'
-    'RzEjEKB21ldGhvZHMYDSADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50UgdtZXRob2RzEjIK'
-    'B2dldHRlcnMYDiADKAsyGC5zY2hlbWEuUGFyYW1ldGVyRWxlbWVudFIHZ2V0dGVycxIyCgdzZX'
-    'R0ZXJzGA8gAygLMhguc2NoZW1hLlBhcmFtZXRlckVsZW1lbnRSB3NldHRlcnMSOQoNc3RhdGlj'
-    'X2ZpZWxkcxgQIAMoCzIULnNjaGVtYS5GaWVsZEVsZW1lbnRSDHN0YXRpY0ZpZWxkcxI+Cg5zdG'
-    'F0aWNfbWV0aG9kcxgRIAMoCzIXLnNjaGVtYS5GdW5jdGlvbkVsZW1lbnRSDXN0YXRpY01ldGhv'
-    'ZHMSPwoOc3RhdGljX2dldHRlcnMYEiADKAsyGC5zY2hlbWEuUGFyYW1ldGVyRWxlbWVudFINc3'
-    'RhdGljR2V0dGVycxI/Cg5zdGF0aWNfc2V0dGVycxgTIAMoCzIYLnNjaGVtYS5QYXJhbWV0ZXJF'
-    'bGVtZW50Ug1zdGF0aWNTZXR0ZXJz');
+    'RzEjEKB21ldGhvZHMYDSADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50UgdtZXRob2RzEioK'
+    'B2dldHRlcnMYDiADKAsyEC5zY2hlbWEuRGFydFR5cGVSB2dldHRlcnMSKgoHc2V0dGVycxgPIA'
+    'MoCzIQLnNjaGVtYS5EYXJ0VHlwZVIHc2V0dGVycxI5Cg1zdGF0aWNfZmllbGRzGBAgAygLMhQu'
+    'c2NoZW1hLkZpZWxkRWxlbWVudFIMc3RhdGljRmllbGRzEj4KDnN0YXRpY19tZXRob2RzGBEgAy'
+    'gLMhcuc2NoZW1hLkZ1bmN0aW9uRWxlbWVudFINc3RhdGljTWV0aG9kcxI3Cg5zdGF0aWNfZ2V0'
+    'dGVycxgSIAMoCzIQLnNjaGVtYS5EYXJ0VHlwZVINc3RhdGljR2V0dGVycxI3Cg5zdGF0aWNfc2'
+    'V0dGVycxgTIAMoCzIQLnNjaGVtYS5EYXJ0VHlwZVINc3RhdGljU2V0dGVycw==');
 
 @$core.Deprecated('Use constructorElementDescriptor instead')
 const ConstructorElement$json = {

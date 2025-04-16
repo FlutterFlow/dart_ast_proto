@@ -82,12 +82,12 @@ message ClassElement{
   repeated ConstructorElement constructors = 11;
   repeated FieldElement fields = 12;
   repeated FunctionElement methods = 13;
-  repeated ParameterElement getters = 14;
-  repeated ParameterElement setters = 15;
+  repeated DartType getters = 14;
+  repeated DartType setters = 15;
   repeated FieldElement static_fields = 16;
   repeated FunctionElement static_methods = 17;
-  repeated ParameterElement static_getters = 18;
-  repeated ParameterElement static_setters = 19;
+  repeated DartType static_getters = 18;
+  repeated DartType static_setters = 19;
 }
 
 message ConstructorElement{

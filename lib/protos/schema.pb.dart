@@ -872,12 +872,12 @@ class ClassElement extends $pb.GeneratedMessage {
     $core.Iterable<ConstructorElement>? constructors,
     $core.Iterable<FieldElement>? fields,
     $core.Iterable<FunctionElement>? methods,
-    $core.Iterable<ParameterElement>? getters,
-    $core.Iterable<ParameterElement>? setters,
+    $core.Iterable<DartType>? getters,
+    $core.Iterable<DartType>? setters,
     $core.Iterable<FieldElement>? staticFields,
     $core.Iterable<FunctionElement>? staticMethods,
-    $core.Iterable<ParameterElement>? staticGetters,
-    $core.Iterable<ParameterElement>? staticSetters,
+    $core.Iterable<DartType>? staticGetters,
+    $core.Iterable<DartType>? staticSetters,
   }) {
     final $result = create();
     if (identifier != null) {
@@ -957,12 +957,12 @@ class ClassElement extends $pb.GeneratedMessage {
     ..pc<ConstructorElement>(11, _omitFieldNames ? '' : 'constructors', $pb.PbFieldType.PM, subBuilder: ConstructorElement.create)
     ..pc<FieldElement>(12, _omitFieldNames ? '' : 'fields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
     ..pc<FunctionElement>(13, _omitFieldNames ? '' : 'methods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<ParameterElement>(14, _omitFieldNames ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
-    ..pc<ParameterElement>(15, _omitFieldNames ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
+    ..pc<DartType>(14, _omitFieldNames ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<DartType>(15, _omitFieldNames ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: DartType.create)
     ..pc<FieldElement>(16, _omitFieldNames ? '' : 'staticFields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
     ..pc<FunctionElement>(17, _omitFieldNames ? '' : 'staticMethods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<ParameterElement>(18, _omitFieldNames ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
-    ..pc<ParameterElement>(19, _omitFieldNames ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
+    ..pc<DartType>(18, _omitFieldNames ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<DartType>(19, _omitFieldNames ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
     ..hasRequiredFields = false
   ;
 
@@ -1079,10 +1079,10 @@ class ClassElement extends $pb.GeneratedMessage {
   $pb.PbList<FunctionElement> get methods => $_getList(12);
 
   @$pb.TagNumber(14)
-  $pb.PbList<ParameterElement> get getters => $_getList(13);
+  $pb.PbList<DartType> get getters => $_getList(13);
 
   @$pb.TagNumber(15)
-  $pb.PbList<ParameterElement> get setters => $_getList(14);
+  $pb.PbList<DartType> get setters => $_getList(14);
 
   @$pb.TagNumber(16)
   $pb.PbList<FieldElement> get staticFields => $_getList(15);
@@ -1091,10 +1091,10 @@ class ClassElement extends $pb.GeneratedMessage {
   $pb.PbList<FunctionElement> get staticMethods => $_getList(16);
 
   @$pb.TagNumber(18)
-  $pb.PbList<ParameterElement> get staticGetters => $_getList(17);
+  $pb.PbList<DartType> get staticGetters => $_getList(17);
 
   @$pb.TagNumber(19)
-  $pb.PbList<ParameterElement> get staticSetters => $_getList(18);
+  $pb.PbList<DartType> get staticSetters => $_getList(18);
 }
 
 class ConstructorElement extends $pb.GeneratedMessage {
