@@ -28,6 +28,27 @@ message DartType {
   bool is_symbol = 19;
   bool is_type = 20;
   bool nullable = 21;
+  oneof type {
+    DynamicType dynamic_type = 22;
+    FunctionType function_type = 23;
+    ParameterizedType parameterized_type = 24;
+  }
+}
+
+message DynamicType {
+  
+}
+
+message FunctionType {
+  DartType return_type = 1;
+  repeated DartType normal_parameters = 2;
+  repeated DartType optional_parameters = 3;
+  map<string, DartType> named_parameters = 4;
+}
+
+message ParameterizedType {
+  DartType type = 1;
+  repeated DartType type_arguments = 2;
 }
 
 message ParameterElement {
