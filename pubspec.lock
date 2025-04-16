@@ -100,7 +100,7 @@ packages:
     source: hosted
     version: "3.0.1"
   lints:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: lints
       sha256: cbf8d4b858bb0134ef3ef87841abdf8d63bfc255c266b7bf6b39daa1085c4290
@@ -143,18 +143,10 @@ packages:
     dependency: "direct main"
     description:
       name: protobuf
-      sha256: "68645b24e0716782e58948f8467fd42a880f255096a821f9e7d0ec625b00c84d"
+      sha256: fbb0c37d435641d0b84813c1dad41e6fa61ddc880a320bce16b3063ecec35aa6
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
-  protoc_plugin:
-    dependency: "direct dev"
-    description:
-      name: protoc_plugin
-      sha256: fb0554851c9eca30bd18405fbbfe81e39166d4a2f0e5b770606fd69da3da0b2f
-      url: "https://pub.dev"
-    source: hosted
-    version: "21.1.2"
+    version: "4.0.0"
   sky_engine:
     dependency: transitive
     description: flutter

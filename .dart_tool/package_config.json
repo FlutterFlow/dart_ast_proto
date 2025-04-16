@@ -111,15 +111,9 @@
     },
     {
       "name": "protobuf",
-      "rootUri": "file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protobuf-3.1.0",
+      "rootUri": "file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protobuf-4.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
-      "name": "protoc_plugin",
-      "rootUri": "file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protoc_plugin-21.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.3"
     },
     {
       "name": "sky_engine",
@@ -182,7 +176,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2025-04-16T13:27:15.025390Z",
+  "generated": "2025-04-16T14:39:30.849185Z",
   "generator": "pub",
   "generatorVersion": "3.6.1",
   "flutterRoot": "file:///Users/wenkaifan/Development/flutter",

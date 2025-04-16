@@ -63,13 +63,9 @@ path
 file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/path-1.9.0/
 file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/path-1.9.0/lib/
 protobuf
-2.19
-file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protobuf-3.1.0/
-file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protobuf-3.1.0/lib/
-protoc_plugin
-2.19
-file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protoc_plugin-21.1.2/
-file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protoc_plugin-21.1.2/lib/
+3.3
+file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protobuf-4.0.0/
+file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/protobuf-4.0.0/lib/
 source_span
 2.18
 file:///Users/wenkaifan/.pub-cache/hosted/pub.dev/source_span-1.10.0/
