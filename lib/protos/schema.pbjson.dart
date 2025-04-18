@@ -144,17 +144,17 @@ const ClassElement$json = const {
     const {'1': 'constructors', '3': 11, '4': 3, '5': 11, '6': '.schema.ConstructorElement', '10': 'constructors'},
     const {'1': 'fields', '3': 12, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'fields'},
     const {'1': 'methods', '3': 13, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'methods'},
-    const {'1': 'getters', '3': 14, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'getters'},
-    const {'1': 'setters', '3': 15, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'setters'},
+    const {'1': 'getters', '3': 14, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'getters'},
+    const {'1': 'setters', '3': 15, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'setters'},
     const {'1': 'static_fields', '3': 16, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticFields'},
     const {'1': 'static_methods', '3': 17, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'staticMethods'},
-    const {'1': 'static_getters', '3': 18, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'staticGetters'},
-    const {'1': 'static_setters', '3': 19, '4': 3, '5': 11, '6': '.schema.DartType', '10': 'staticSetters'},
+    const {'1': 'static_getters', '3': 18, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticGetters'},
+    const {'1': 'static_setters', '3': 19, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticSetters'},
   ],
 };
 
 /// Descriptor for `ClassElement`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List classElementDescriptor = $convert.base64Decode('CgxDbGFzc0VsZW1lbnQSMgoKaWRlbnRpZmllchgBIAEoCzISLnNjaGVtYS5JZGVudGlmaWVyUgppZGVudGlmaWVyEh8KC2lzX2Fic3RyYWN0GAIgASgIUgppc0Fic3RyYWN0EhcKB2lzX2Jhc2UYAyABKAhSBmlzQmFzZRIZCghpc19maW5hbBgEIAEoCFIHaXNGaW5hbBIhCgxpc19pbnRlcmZhY2UYBSABKAhSC2lzSW50ZXJmYWNlEhkKCGlzX21peGluGAYgASgIUgdpc01peGluEhsKCWlzX3NlYWxlZBgHIAEoCFIIaXNTZWFsZWQSMgoKaW50ZXJmYWNlcxgIIAMoCzISLnNjaGVtYS5JZGVudGlmaWVyUgppbnRlcmZhY2VzEioKBm1peGlucxgJIAMoCzISLnNjaGVtYS5JZGVudGlmaWVyUgZtaXhpbnMSMwoLc3VwZXJfY2xhc3MYCiABKAsyEi5zY2hlbWEuSWRlbnRpZmllclIKc3VwZXJDbGFzcxI+Cgxjb25zdHJ1Y3RvcnMYCyADKAsyGi5zY2hlbWEuQ29uc3RydWN0b3JFbGVtZW50Ugxjb25zdHJ1Y3RvcnMSLAoGZmllbGRzGAwgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFIGZmllbGRzEjEKB21ldGhvZHMYDSADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50UgdtZXRob2RzEioKB2dldHRlcnMYDiADKAsyEC5zY2hlbWEuRGFydFR5cGVSB2dldHRlcnMSKgoHc2V0dGVycxgPIAMoCzIQLnNjaGVtYS5EYXJ0VHlwZVIHc2V0dGVycxI5Cg1zdGF0aWNfZmllbGRzGBAgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFIMc3RhdGljRmllbGRzEj4KDnN0YXRpY19tZXRob2RzGBEgAygLMhcuc2NoZW1hLkZ1bmN0aW9uRWxlbWVudFINc3RhdGljTWV0aG9kcxI3Cg5zdGF0aWNfZ2V0dGVycxgSIAMoCzIQLnNjaGVtYS5EYXJ0VHlwZVINc3RhdGljR2V0dGVycxI3Cg5zdGF0aWNfc2V0dGVycxgTIAMoCzIQLnNjaGVtYS5EYXJ0VHlwZVINc3RhdGljU2V0dGVycw==');
+final $typed_data.Uint8List classElementDescriptor = $convert.base64Decode('CgxDbGFzc0VsZW1lbnQSMgoKaWRlbnRpZmllchgBIAEoCzISLnNjaGVtYS5JZGVudGlmaWVyUgppZGVudGlmaWVyEh8KC2lzX2Fic3RyYWN0GAIgASgIUgppc0Fic3RyYWN0EhcKB2lzX2Jhc2UYAyABKAhSBmlzQmFzZRIZCghpc19maW5hbBgEIAEoCFIHaXNGaW5hbBIhCgxpc19pbnRlcmZhY2UYBSABKAhSC2lzSW50ZXJmYWNlEhkKCGlzX21peGluGAYgASgIUgdpc01peGluEhsKCWlzX3NlYWxlZBgHIAEoCFIIaXNTZWFsZWQSMgoKaW50ZXJmYWNlcxgIIAMoCzISLnNjaGVtYS5JZGVudGlmaWVyUgppbnRlcmZhY2VzEioKBm1peGlucxgJIAMoCzISLnNjaGVtYS5JZGVudGlmaWVyUgZtaXhpbnMSMwoLc3VwZXJfY2xhc3MYCiABKAsyEi5zY2hlbWEuSWRlbnRpZmllclIKc3VwZXJDbGFzcxI+Cgxjb25zdHJ1Y3RvcnMYCyADKAsyGi5zY2hlbWEuQ29uc3RydWN0b3JFbGVtZW50Ugxjb25zdHJ1Y3RvcnMSLAoGZmllbGRzGAwgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFIGZmllbGRzEjEKB21ldGhvZHMYDSADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50UgdtZXRob2RzEi4KB2dldHRlcnMYDiADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgdnZXR0ZXJzEi4KB3NldHRlcnMYDyADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgdzZXR0ZXJzEjkKDXN0YXRpY19maWVsZHMYECADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgxzdGF0aWNGaWVsZHMSPgoOc3RhdGljX21ldGhvZHMYESADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50Ug1zdGF0aWNNZXRob2RzEjsKDnN0YXRpY19nZXR0ZXJzGBIgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFINc3RhdGljR2V0dGVycxI7Cg5zdGF0aWNfc2V0dGVycxgTIAMoCzIULnNjaGVtYS5GaWVsZEVsZW1lbnRSDXN0YXRpY1NldHRlcnM=');
 @$core.Deprecated('Use constructorElementDescriptor instead')
 const ConstructorElement$json = const {
   '1': 'ConstructorElement',

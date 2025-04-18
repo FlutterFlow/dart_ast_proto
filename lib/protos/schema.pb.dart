@@ -845,12 +845,12 @@ class ClassElement extends $pb.GeneratedMessage {
     ..pc<ConstructorElement>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'constructors', $pb.PbFieldType.PM, subBuilder: ConstructorElement.create)
     ..pc<FieldElement>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
     ..pc<FunctionElement>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'methods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<DartType>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..pc<DartType>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<FieldElement>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FieldElement>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
     ..pc<FieldElement>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticFields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
     ..pc<FunctionElement>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticMethods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<DartType>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..pc<DartType>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<FieldElement>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FieldElement>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
     ..hasRequiredFields = false
   ;
 
@@ -869,12 +869,12 @@ class ClassElement extends $pb.GeneratedMessage {
     $core.Iterable<ConstructorElement>? constructors,
     $core.Iterable<FieldElement>? fields,
     $core.Iterable<FunctionElement>? methods,
-    $core.Iterable<DartType>? getters,
-    $core.Iterable<DartType>? setters,
+    $core.Iterable<FieldElement>? getters,
+    $core.Iterable<FieldElement>? setters,
     $core.Iterable<FieldElement>? staticFields,
     $core.Iterable<FunctionElement>? staticMethods,
-    $core.Iterable<DartType>? staticGetters,
-    $core.Iterable<DartType>? staticSetters,
+    $core.Iterable<FieldElement>? staticGetters,
+    $core.Iterable<FieldElement>? staticSetters,
   }) {
     final _result = create();
     if (identifier != null) {
@@ -1049,10 +1049,10 @@ class ClassElement extends $pb.GeneratedMessage {
   $core.List<FunctionElement> get methods => $_getList(12);
 
   @$pb.TagNumber(14)
-  $core.List<DartType> get getters => $_getList(13);
+  $core.List<FieldElement> get getters => $_getList(13);
 
   @$pb.TagNumber(15)
-  $core.List<DartType> get setters => $_getList(14);
+  $core.List<FieldElement> get setters => $_getList(14);
 
   @$pb.TagNumber(16)
   $core.List<FieldElement> get staticFields => $_getList(15);
@@ -1061,10 +1061,10 @@ class ClassElement extends $pb.GeneratedMessage {
   $core.List<FunctionElement> get staticMethods => $_getList(16);
 
   @$pb.TagNumber(18)
-  $core.List<DartType> get staticGetters => $_getList(17);
+  $core.List<FieldElement> get staticGetters => $_getList(17);
 
   @$pb.TagNumber(19)
-  $core.List<DartType> get staticSetters => $_getList(18);
+  $core.List<FieldElement> get staticSetters => $_getList(18);
 }
 
 class ConstructorElement extends $pb.GeneratedMessage {
