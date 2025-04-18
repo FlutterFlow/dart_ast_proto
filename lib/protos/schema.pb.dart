@@ -1,44 +1,37 @@
-//
+///
 //  Generated code. Do not modify.
 //  source: protos/schema.proto
 //
-// @dart = 3.3
-
-// ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
-
 class Identifier extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Identifier', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uri')
+    ..hasRequiredFields = false
+  ;
+
+  Identifier._() : super();
   factory Identifier({
     $core.String? name,
     $core.String? uri,
   }) {
-    final $result = create();
+    final _result = create();
     if (name != null) {
-      $result.name = name;
+      _result.name = name;
     }
     if (uri != null) {
-      $result.uri = uri;
+      _result.uri = uri;
     }
-    return $result;
+    return _result;
   }
-  Identifier._() : super();
   factory Identifier.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Identifier.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Identifier', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOS(2, _omitFieldNames ? '' : 'uri')
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -48,10 +41,8 @@ class Identifier extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Identifier copyWith(void Function(Identifier) updates) => super.copyWith((message) => updates(message as Identifier)) as Identifier;
-
+  Identifier copyWith(void Function(Identifier) updates) => super.copyWith((message) => updates(message as Identifier)) as Identifier; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static Identifier create() => Identifier._();
   Identifier createEmptyInstance() => create();
@@ -67,7 +58,7 @@ class Identifier extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => $_clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
@@ -76,7 +67,7 @@ class Identifier extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasUri() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUri() => $_clearField(2);
+  void clearUri() => clearField(2);
 }
 
 enum DartType_Type {
@@ -87,6 +78,42 @@ enum DartType_Type {
 }
 
 class DartType extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DartType_Type> _DartType_TypeByTag = {
+    22 : DartType_Type.dynamicType,
+    23 : DartType_Type.functionType,
+    24 : DartType_Type.parameterizedType,
+    0 : DartType_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DartType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..oo(0, [22, 23, 24])
+    ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFuture')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFutureOr')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isStream')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBool')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isDouble')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isEnum')
+    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFunction')
+    ..aOB(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isInt')
+    ..aOB(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isIterable')
+    ..aOB(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isList')
+    ..aOB(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isMap')
+    ..aOB(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isNull')
+    ..aOB(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isNum')
+    ..aOB(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isObject')
+    ..aOB(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isRecord')
+    ..aOB(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSet')
+    ..aOB(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isString')
+    ..aOB(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSymbol')
+    ..aOB(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isType')
+    ..aOB(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nullable')
+    ..aOM<DynamicType>(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dynamicType', subBuilder: DynamicType.create)
+    ..aOM<FunctionType>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'functionType', subBuilder: FunctionType.create)
+    ..aOM<ParameterizedType>(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameterizedType', subBuilder: ParameterizedType.create)
+    ..hasRequiredFields = false
+  ;
+
+  DartType._() : super();
   factory DartType({
     Identifier? identifier,
     $core.bool? isFuture,
@@ -113,120 +140,83 @@ class DartType extends $pb.GeneratedMessage {
     FunctionType? functionType,
     ParameterizedType? parameterizedType,
   }) {
-    final $result = create();
+    final _result = create();
     if (identifier != null) {
-      $result.identifier = identifier;
+      _result.identifier = identifier;
     }
     if (isFuture != null) {
-      $result.isFuture = isFuture;
+      _result.isFuture = isFuture;
     }
     if (isFutureOr != null) {
-      $result.isFutureOr = isFutureOr;
+      _result.isFutureOr = isFutureOr;
     }
     if (isStream != null) {
-      $result.isStream = isStream;
+      _result.isStream = isStream;
     }
     if (isBool != null) {
-      $result.isBool = isBool;
+      _result.isBool = isBool;
     }
     if (isDouble != null) {
-      $result.isDouble = isDouble;
+      _result.isDouble = isDouble;
     }
     if (isEnum != null) {
-      $result.isEnum = isEnum;
+      _result.isEnum = isEnum;
     }
     if (isFunction != null) {
-      $result.isFunction = isFunction;
+      _result.isFunction = isFunction;
     }
     if (isInt != null) {
-      $result.isInt = isInt;
+      _result.isInt = isInt;
     }
     if (isIterable != null) {
-      $result.isIterable = isIterable;
+      _result.isIterable = isIterable;
     }
     if (isList != null) {
-      $result.isList = isList;
+      _result.isList = isList;
     }
     if (isMap != null) {
-      $result.isMap = isMap;
+      _result.isMap = isMap;
     }
     if (isNull != null) {
-      $result.isNull = isNull;
+      _result.isNull = isNull;
     }
     if (isNum != null) {
-      $result.isNum = isNum;
+      _result.isNum = isNum;
     }
     if (isObject != null) {
-      $result.isObject = isObject;
+      _result.isObject = isObject;
     }
     if (isRecord != null) {
-      $result.isRecord = isRecord;
+      _result.isRecord = isRecord;
     }
     if (isSet != null) {
-      $result.isSet = isSet;
+      _result.isSet = isSet;
     }
     if (isString != null) {
-      $result.isString = isString;
+      _result.isString = isString;
     }
     if (isSymbol != null) {
-      $result.isSymbol = isSymbol;
+      _result.isSymbol = isSymbol;
     }
     if (isType != null) {
-      $result.isType = isType;
+      _result.isType = isType;
     }
     if (nullable != null) {
-      $result.nullable = nullable;
+      _result.nullable = nullable;
     }
     if (dynamicType != null) {
-      $result.dynamicType = dynamicType;
+      _result.dynamicType = dynamicType;
     }
     if (functionType != null) {
-      $result.functionType = functionType;
+      _result.functionType = functionType;
     }
     if (parameterizedType != null) {
-      $result.parameterizedType = parameterizedType;
+      _result.parameterizedType = parameterizedType;
     }
-    return $result;
+    return _result;
   }
-  DartType._() : super();
   factory DartType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DartType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static const $core.Map<$core.int, DartType_Type> _DartType_TypeByTag = {
-    22 : DartType_Type.dynamicType,
-    23 : DartType_Type.functionType,
-    24 : DartType_Type.parameterizedType,
-    0 : DartType_Type.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DartType', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..oo(0, [22, 23, 24])
-    ..aOM<Identifier>(1, _omitFieldNames ? '' : 'identifier', subBuilder: Identifier.create)
-    ..aOB(2, _omitFieldNames ? '' : 'isFuture')
-    ..aOB(3, _omitFieldNames ? '' : 'isFutureOr')
-    ..aOB(4, _omitFieldNames ? '' : 'isStream')
-    ..aOB(5, _omitFieldNames ? '' : 'isBool')
-    ..aOB(6, _omitFieldNames ? '' : 'isDouble')
-    ..aOB(7, _omitFieldNames ? '' : 'isEnum')
-    ..aOB(8, _omitFieldNames ? '' : 'isFunction')
-    ..aOB(9, _omitFieldNames ? '' : 'isInt')
-    ..aOB(10, _omitFieldNames ? '' : 'isIterable')
-    ..aOB(11, _omitFieldNames ? '' : 'isList')
-    ..aOB(12, _omitFieldNames ? '' : 'isMap')
-    ..aOB(13, _omitFieldNames ? '' : 'isNull')
-    ..aOB(14, _omitFieldNames ? '' : 'isNum')
-    ..aOB(15, _omitFieldNames ? '' : 'isObject')
-    ..aOB(16, _omitFieldNames ? '' : 'isRecord')
-    ..aOB(17, _omitFieldNames ? '' : 'isSet')
-    ..aOB(18, _omitFieldNames ? '' : 'isString')
-    ..aOB(19, _omitFieldNames ? '' : 'isSymbol')
-    ..aOB(20, _omitFieldNames ? '' : 'isType')
-    ..aOB(21, _omitFieldNames ? '' : 'nullable')
-    ..aOM<DynamicType>(22, _omitFieldNames ? '' : 'dynamicType', subBuilder: DynamicType.create)
-    ..aOM<FunctionType>(23, _omitFieldNames ? '' : 'functionType', subBuilder: FunctionType.create)
-    ..aOM<ParameterizedType>(24, _omitFieldNames ? '' : 'parameterizedType', subBuilder: ParameterizedType.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -236,10 +226,8 @@ class DartType extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DartType copyWith(void Function(DartType) updates) => super.copyWith((message) => updates(message as DartType)) as DartType;
-
+  DartType copyWith(void Function(DartType) updates) => super.copyWith((message) => updates(message as DartType)) as DartType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static DartType create() => DartType._();
   DartType createEmptyInstance() => create();
@@ -249,16 +237,16 @@ class DartType extends $pb.GeneratedMessage {
   static DartType? _defaultInstance;
 
   DartType_Type whichType() => _DartType_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   Identifier get identifier => $_getN(0);
   @$pb.TagNumber(1)
-  set identifier(Identifier v) { $_setField(1, v); }
+  set identifier(Identifier v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIdentifier() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIdentifier() => $_clearField(1);
+  void clearIdentifier() => clearField(1);
   @$pb.TagNumber(1)
   Identifier ensureIdentifier() => $_ensure(0);
 
@@ -269,7 +257,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIsFuture() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsFuture() => $_clearField(2);
+  void clearIsFuture() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get isFutureOr => $_getBF(2);
@@ -278,7 +266,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasIsFutureOr() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIsFutureOr() => $_clearField(3);
+  void clearIsFutureOr() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get isStream => $_getBF(3);
@@ -287,7 +275,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasIsStream() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsStream() => $_clearField(4);
+  void clearIsStream() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get isBool => $_getBF(4);
@@ -296,7 +284,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasIsBool() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsBool() => $_clearField(5);
+  void clearIsBool() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.bool get isDouble => $_getBF(5);
@@ -305,7 +293,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasIsDouble() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIsDouble() => $_clearField(6);
+  void clearIsDouble() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.bool get isEnum => $_getBF(6);
@@ -314,7 +302,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool hasIsEnum() => $_has(6);
   @$pb.TagNumber(7)
-  void clearIsEnum() => $_clearField(7);
+  void clearIsEnum() => clearField(7);
 
   @$pb.TagNumber(8)
   $core.bool get isFunction => $_getBF(7);
@@ -323,7 +311,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool hasIsFunction() => $_has(7);
   @$pb.TagNumber(8)
-  void clearIsFunction() => $_clearField(8);
+  void clearIsFunction() => clearField(8);
 
   @$pb.TagNumber(9)
   $core.bool get isInt => $_getBF(8);
@@ -332,7 +320,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool hasIsInt() => $_has(8);
   @$pb.TagNumber(9)
-  void clearIsInt() => $_clearField(9);
+  void clearIsInt() => clearField(9);
 
   @$pb.TagNumber(10)
   $core.bool get isIterable => $_getBF(9);
@@ -341,7 +329,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.bool hasIsIterable() => $_has(9);
   @$pb.TagNumber(10)
-  void clearIsIterable() => $_clearField(10);
+  void clearIsIterable() => clearField(10);
 
   @$pb.TagNumber(11)
   $core.bool get isList => $_getBF(10);
@@ -350,7 +338,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.bool hasIsList() => $_has(10);
   @$pb.TagNumber(11)
-  void clearIsList() => $_clearField(11);
+  void clearIsList() => clearField(11);
 
   @$pb.TagNumber(12)
   $core.bool get isMap => $_getBF(11);
@@ -359,7 +347,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $core.bool hasIsMap() => $_has(11);
   @$pb.TagNumber(12)
-  void clearIsMap() => $_clearField(12);
+  void clearIsMap() => clearField(12);
 
   @$pb.TagNumber(13)
   $core.bool get isNull => $_getBF(12);
@@ -368,7 +356,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $core.bool hasIsNull() => $_has(12);
   @$pb.TagNumber(13)
-  void clearIsNull() => $_clearField(13);
+  void clearIsNull() => clearField(13);
 
   @$pb.TagNumber(14)
   $core.bool get isNum => $_getBF(13);
@@ -377,7 +365,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $core.bool hasIsNum() => $_has(13);
   @$pb.TagNumber(14)
-  void clearIsNum() => $_clearField(14);
+  void clearIsNum() => clearField(14);
 
   @$pb.TagNumber(15)
   $core.bool get isObject => $_getBF(14);
@@ -386,7 +374,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $core.bool hasIsObject() => $_has(14);
   @$pb.TagNumber(15)
-  void clearIsObject() => $_clearField(15);
+  void clearIsObject() => clearField(15);
 
   @$pb.TagNumber(16)
   $core.bool get isRecord => $_getBF(15);
@@ -395,7 +383,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $core.bool hasIsRecord() => $_has(15);
   @$pb.TagNumber(16)
-  void clearIsRecord() => $_clearField(16);
+  void clearIsRecord() => clearField(16);
 
   @$pb.TagNumber(17)
   $core.bool get isSet => $_getBF(16);
@@ -404,7 +392,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   $core.bool hasIsSet() => $_has(16);
   @$pb.TagNumber(17)
-  void clearIsSet() => $_clearField(17);
+  void clearIsSet() => clearField(17);
 
   @$pb.TagNumber(18)
   $core.bool get isString => $_getBF(17);
@@ -413,7 +401,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $core.bool hasIsString() => $_has(17);
   @$pb.TagNumber(18)
-  void clearIsString() => $_clearField(18);
+  void clearIsString() => clearField(18);
 
   @$pb.TagNumber(19)
   $core.bool get isSymbol => $_getBF(18);
@@ -422,7 +410,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   $core.bool hasIsSymbol() => $_has(18);
   @$pb.TagNumber(19)
-  void clearIsSymbol() => $_clearField(19);
+  void clearIsSymbol() => clearField(19);
 
   @$pb.TagNumber(20)
   $core.bool get isType => $_getBF(19);
@@ -431,7 +419,7 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   $core.bool hasIsType() => $_has(19);
   @$pb.TagNumber(20)
-  void clearIsType() => $_clearField(20);
+  void clearIsType() => clearField(20);
 
   @$pb.TagNumber(21)
   $core.bool get nullable => $_getBF(20);
@@ -440,52 +428,51 @@ class DartType extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   $core.bool hasNullable() => $_has(20);
   @$pb.TagNumber(21)
-  void clearNullable() => $_clearField(21);
+  void clearNullable() => clearField(21);
 
   @$pb.TagNumber(22)
   DynamicType get dynamicType => $_getN(21);
   @$pb.TagNumber(22)
-  set dynamicType(DynamicType v) { $_setField(22, v); }
+  set dynamicType(DynamicType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasDynamicType() => $_has(21);
   @$pb.TagNumber(22)
-  void clearDynamicType() => $_clearField(22);
+  void clearDynamicType() => clearField(22);
   @$pb.TagNumber(22)
   DynamicType ensureDynamicType() => $_ensure(21);
 
   @$pb.TagNumber(23)
   FunctionType get functionType => $_getN(22);
   @$pb.TagNumber(23)
-  set functionType(FunctionType v) { $_setField(23, v); }
+  set functionType(FunctionType v) { setField(23, v); }
   @$pb.TagNumber(23)
   $core.bool hasFunctionType() => $_has(22);
   @$pb.TagNumber(23)
-  void clearFunctionType() => $_clearField(23);
+  void clearFunctionType() => clearField(23);
   @$pb.TagNumber(23)
   FunctionType ensureFunctionType() => $_ensure(22);
 
   @$pb.TagNumber(24)
   ParameterizedType get parameterizedType => $_getN(23);
   @$pb.TagNumber(24)
-  set parameterizedType(ParameterizedType v) { $_setField(24, v); }
+  set parameterizedType(ParameterizedType v) { setField(24, v); }
   @$pb.TagNumber(24)
   $core.bool hasParameterizedType() => $_has(23);
   @$pb.TagNumber(24)
-  void clearParameterizedType() => $_clearField(24);
+  void clearParameterizedType() => clearField(24);
   @$pb.TagNumber(24)
   ParameterizedType ensureParameterizedType() => $_ensure(23);
 }
 
 class DynamicType extends $pb.GeneratedMessage {
-  factory DynamicType() => create();
-  DynamicType._() : super();
-  factory DynamicType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DynamicType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DynamicType', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DynamicType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
+  DynamicType._() : super();
+  factory DynamicType() => create();
+  factory DynamicType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DynamicType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -495,10 +482,8 @@ class DynamicType extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DynamicType copyWith(void Function(DynamicType) updates) => super.copyWith((message) => updates(message as DynamicType)) as DynamicType;
-
+  DynamicType copyWith(void Function(DynamicType) updates) => super.copyWith((message) => updates(message as DynamicType)) as DynamicType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static DynamicType create() => DynamicType._();
   DynamicType createEmptyInstance() => create();
@@ -509,39 +494,38 @@ class DynamicType extends $pb.GeneratedMessage {
 }
 
 class FunctionType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FunctionType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOM<DartType>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'returnType', subBuilder: DartType.create)
+    ..pc<DartType>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'normalParameters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<DartType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalParameters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..m<$core.String, DartType>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'namedParameters', entryClassName: 'FunctionType.NamedParametersEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DartType.create, packageName: const $pb.PackageName('schema'))
+    ..hasRequiredFields = false
+  ;
+
+  FunctionType._() : super();
   factory FunctionType({
     DartType? returnType,
     $core.Iterable<DartType>? normalParameters,
     $core.Iterable<DartType>? optionalParameters,
-    $pb.PbMap<$core.String, DartType>? namedParameters,
+    $core.Map<$core.String, DartType>? namedParameters,
   }) {
-    final $result = create();
+    final _result = create();
     if (returnType != null) {
-      $result.returnType = returnType;
+      _result.returnType = returnType;
     }
     if (normalParameters != null) {
-      $result.normalParameters.addAll(normalParameters);
+      _result.normalParameters.addAll(normalParameters);
     }
     if (optionalParameters != null) {
-      $result.optionalParameters.addAll(optionalParameters);
+      _result.optionalParameters.addAll(optionalParameters);
     }
     if (namedParameters != null) {
-      $result.namedParameters.addAll(namedParameters);
+      _result.namedParameters.addAll(namedParameters);
     }
-    return $result;
+    return _result;
   }
-  FunctionType._() : super();
   factory FunctionType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FunctionType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FunctionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOM<DartType>(1, _omitFieldNames ? '' : 'returnType', subBuilder: DartType.create)
-    ..pc<DartType>(2, _omitFieldNames ? '' : 'normalParameters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..pc<DartType>(3, _omitFieldNames ? '' : 'optionalParameters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..m<$core.String, DartType>(4, _omitFieldNames ? '' : 'namedParameters', entryClassName: 'FunctionType.NamedParametersEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: DartType.create, valueDefaultOrMaker: DartType.getDefault, packageName: const $pb.PackageName('schema'))
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -551,10 +535,8 @@ class FunctionType extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FunctionType copyWith(void Function(FunctionType) updates) => super.copyWith((message) => updates(message as FunctionType)) as FunctionType;
-
+  FunctionType copyWith(void Function(FunctionType) updates) => super.copyWith((message) => updates(message as FunctionType)) as FunctionType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static FunctionType create() => FunctionType._();
   FunctionType createEmptyInstance() => create();
@@ -566,48 +548,47 @@ class FunctionType extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DartType get returnType => $_getN(0);
   @$pb.TagNumber(1)
-  set returnType(DartType v) { $_setField(1, v); }
+  set returnType(DartType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasReturnType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearReturnType() => $_clearField(1);
+  void clearReturnType() => clearField(1);
   @$pb.TagNumber(1)
   DartType ensureReturnType() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<DartType> get normalParameters => $_getList(1);
+  $core.List<DartType> get normalParameters => $_getList(1);
 
   @$pb.TagNumber(3)
-  $pb.PbList<DartType> get optionalParameters => $_getList(2);
+  $core.List<DartType> get optionalParameters => $_getList(2);
 
   @$pb.TagNumber(4)
-  $pb.PbMap<$core.String, DartType> get namedParameters => $_getMap(3);
+  $core.Map<$core.String, DartType> get namedParameters => $_getMap(3);
 }
 
 class ParameterizedType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ParameterizedType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOM<DartType>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', subBuilder: DartType.create)
+    ..pc<DartType>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'typeArguments', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..hasRequiredFields = false
+  ;
+
+  ParameterizedType._() : super();
   factory ParameterizedType({
     DartType? type,
     $core.Iterable<DartType>? typeArguments,
   }) {
-    final $result = create();
+    final _result = create();
     if (type != null) {
-      $result.type = type;
+      _result.type = type;
     }
     if (typeArguments != null) {
-      $result.typeArguments.addAll(typeArguments);
+      _result.typeArguments.addAll(typeArguments);
     }
-    return $result;
+    return _result;
   }
-  ParameterizedType._() : super();
   factory ParameterizedType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ParameterizedType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ParameterizedType', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOM<DartType>(1, _omitFieldNames ? '' : 'type', subBuilder: DartType.create)
-    ..pc<DartType>(2, _omitFieldNames ? '' : 'typeArguments', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -617,10 +598,8 @@ class ParameterizedType extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ParameterizedType copyWith(void Function(ParameterizedType) updates) => super.copyWith((message) => updates(message as ParameterizedType)) as ParameterizedType;
-
+  ParameterizedType copyWith(void Function(ParameterizedType) updates) => super.copyWith((message) => updates(message as ParameterizedType)) as ParameterizedType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static ParameterizedType create() => ParameterizedType._();
   ParameterizedType createEmptyInstance() => create();
@@ -632,19 +611,31 @@ class ParameterizedType extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DartType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(DartType v) { $_setField(1, v); }
+  set type(DartType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => $_clearField(1);
+  void clearType() => clearField(1);
   @$pb.TagNumber(1)
   DartType ensureType() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<DartType> get typeArguments => $_getList(1);
+  $core.List<DartType> get typeArguments => $_getList(1);
 }
 
 class ParameterElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ParameterElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isNamed')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isOptional')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isPositional')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isRequired')
+    ..pc<ParameterElement>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
+    ..aOM<DartType>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', subBuilder: DartType.create)
+    ..hasRequiredFields = false
+  ;
+
+  ParameterElement._() : super();
   factory ParameterElement({
     $core.String? name,
     $core.bool? isNamed,
@@ -654,45 +645,32 @@ class ParameterElement extends $pb.GeneratedMessage {
     $core.Iterable<ParameterElement>? parameters,
     DartType? type,
   }) {
-    final $result = create();
+    final _result = create();
     if (name != null) {
-      $result.name = name;
+      _result.name = name;
     }
     if (isNamed != null) {
-      $result.isNamed = isNamed;
+      _result.isNamed = isNamed;
     }
     if (isOptional != null) {
-      $result.isOptional = isOptional;
+      _result.isOptional = isOptional;
     }
     if (isPositional != null) {
-      $result.isPositional = isPositional;
+      _result.isPositional = isPositional;
     }
     if (isRequired != null) {
-      $result.isRequired = isRequired;
+      _result.isRequired = isRequired;
     }
     if (parameters != null) {
-      $result.parameters.addAll(parameters);
+      _result.parameters.addAll(parameters);
     }
     if (type != null) {
-      $result.type = type;
+      _result.type = type;
     }
-    return $result;
+    return _result;
   }
-  ParameterElement._() : super();
   factory ParameterElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ParameterElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ParameterElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOB(2, _omitFieldNames ? '' : 'isNamed')
-    ..aOB(3, _omitFieldNames ? '' : 'isOptional')
-    ..aOB(4, _omitFieldNames ? '' : 'isPositional')
-    ..aOB(5, _omitFieldNames ? '' : 'isRequired')
-    ..pc<ParameterElement>(6, _omitFieldNames ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
-    ..aOM<DartType>(7, _omitFieldNames ? '' : 'type', subBuilder: DartType.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -702,10 +680,8 @@ class ParameterElement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ParameterElement copyWith(void Function(ParameterElement) updates) => super.copyWith((message) => updates(message as ParameterElement)) as ParameterElement;
-
+  ParameterElement copyWith(void Function(ParameterElement) updates) => super.copyWith((message) => updates(message as ParameterElement)) as ParameterElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static ParameterElement create() => ParameterElement._();
   ParameterElement createEmptyInstance() => create();
@@ -721,7 +697,7 @@ class ParameterElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => $_clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.bool get isNamed => $_getBF(1);
@@ -730,7 +706,7 @@ class ParameterElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIsNamed() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsNamed() => $_clearField(2);
+  void clearIsNamed() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get isOptional => $_getBF(2);
@@ -739,7 +715,7 @@ class ParameterElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasIsOptional() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIsOptional() => $_clearField(3);
+  void clearIsOptional() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get isPositional => $_getBF(3);
@@ -748,7 +724,7 @@ class ParameterElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasIsPositional() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsPositional() => $_clearField(4);
+  void clearIsPositional() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get isRequired => $_getBF(4);
@@ -757,19 +733,19 @@ class ParameterElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasIsRequired() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsRequired() => $_clearField(5);
+  void clearIsRequired() => clearField(5);
 
   @$pb.TagNumber(6)
-  $pb.PbList<ParameterElement> get parameters => $_getList(5);
+  $core.List<ParameterElement> get parameters => $_getList(5);
 
   @$pb.TagNumber(7)
   DartType get type => $_getN(6);
   @$pb.TagNumber(7)
-  set type(DartType v) { $_setField(7, v); }
+  set type(DartType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasType() => $_has(6);
   @$pb.TagNumber(7)
-  void clearType() => $_clearField(7);
+  void clearType() => clearField(7);
   @$pb.TagNumber(7)
   DartType ensureType() => $_ensure(6);
 }
@@ -781,35 +757,34 @@ enum Element_Element {
 }
 
 class Element extends $pb.GeneratedMessage {
-  factory Element({
-    ClassElement? class_1,
-    FunctionElement? function,
-  }) {
-    final $result = create();
-    if (class_1 != null) {
-      $result.class_1 = class_1;
-    }
-    if (function != null) {
-      $result.function = function;
-    }
-    return $result;
-  }
-  Element._() : super();
-  factory Element.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Element.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
   static const $core.Map<$core.int, Element_Element> _Element_ElementByTag = {
     1 : Element_Element.class_1,
     2 : Element_Element.function,
     0 : Element_Element.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Element', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Element', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<ClassElement>(1, _omitFieldNames ? '' : 'class', subBuilder: ClassElement.create)
-    ..aOM<FunctionElement>(2, _omitFieldNames ? '' : 'function', subBuilder: FunctionElement.create)
+    ..aOM<ClassElement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'class', subBuilder: ClassElement.create)
+    ..aOM<FunctionElement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: FunctionElement.create)
     ..hasRequiredFields = false
   ;
 
+  Element._() : super();
+  factory Element({
+    ClassElement? class_1,
+    FunctionElement? function,
+  }) {
+    final _result = create();
+    if (class_1 != null) {
+      _result.class_1 = class_1;
+    }
+    if (function != null) {
+      _result.function = function;
+    }
+    return _result;
+  }
+  factory Element.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Element.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -819,10 +794,8 @@ class Element extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Element copyWith(void Function(Element) updates) => super.copyWith((message) => updates(message as Element)) as Element;
-
+  Element copyWith(void Function(Element) updates) => super.copyWith((message) => updates(message as Element)) as Element; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static Element create() => Element._();
   Element createEmptyInstance() => create();
@@ -832,32 +805,56 @@ class Element extends $pb.GeneratedMessage {
   static Element? _defaultInstance;
 
   Element_Element whichElement() => _Element_ElementByTag[$_whichOneof(0)]!;
-  void clearElement() => $_clearField($_whichOneof(0));
+  void clearElement() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   ClassElement get class_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set class_1(ClassElement v) { $_setField(1, v); }
+  set class_1(ClassElement v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClass_1() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClass_1() => $_clearField(1);
+  void clearClass_1() => clearField(1);
   @$pb.TagNumber(1)
   ClassElement ensureClass_1() => $_ensure(0);
 
   @$pb.TagNumber(2)
   FunctionElement get function => $_getN(1);
   @$pb.TagNumber(2)
-  set function(FunctionElement v) { $_setField(2, v); }
+  set function(FunctionElement v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasFunction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFunction() => $_clearField(2);
+  void clearFunction() => clearField(2);
   @$pb.TagNumber(2)
   FunctionElement ensureFunction() => $_ensure(1);
 }
 
 class ClassElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClassElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBase')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isInterface')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isMixin')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSealed')
+    ..pc<Identifier>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'interfaces', $pb.PbFieldType.PM, subBuilder: Identifier.create)
+    ..pc<Identifier>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mixins', $pb.PbFieldType.PM, subBuilder: Identifier.create)
+    ..aOM<Identifier>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'superClass', subBuilder: Identifier.create)
+    ..pc<ConstructorElement>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'constructors', $pb.PbFieldType.PM, subBuilder: ConstructorElement.create)
+    ..pc<FieldElement>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FunctionElement>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'methods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
+    ..pc<DartType>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<DartType>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<FieldElement>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticFields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FunctionElement>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticMethods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
+    ..pc<DartType>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..pc<DartType>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
+    ..hasRequiredFields = false
+  ;
+
+  ClassElement._() : super();
   factory ClassElement({
     Identifier? identifier,
     $core.bool? isAbstract,
@@ -879,93 +876,68 @@ class ClassElement extends $pb.GeneratedMessage {
     $core.Iterable<DartType>? staticGetters,
     $core.Iterable<DartType>? staticSetters,
   }) {
-    final $result = create();
+    final _result = create();
     if (identifier != null) {
-      $result.identifier = identifier;
+      _result.identifier = identifier;
     }
     if (isAbstract != null) {
-      $result.isAbstract = isAbstract;
+      _result.isAbstract = isAbstract;
     }
     if (isBase != null) {
-      $result.isBase = isBase;
+      _result.isBase = isBase;
     }
     if (isFinal != null) {
-      $result.isFinal = isFinal;
+      _result.isFinal = isFinal;
     }
     if (isInterface != null) {
-      $result.isInterface = isInterface;
+      _result.isInterface = isInterface;
     }
     if (isMixin != null) {
-      $result.isMixin = isMixin;
+      _result.isMixin = isMixin;
     }
     if (isSealed != null) {
-      $result.isSealed = isSealed;
+      _result.isSealed = isSealed;
     }
     if (interfaces != null) {
-      $result.interfaces.addAll(interfaces);
+      _result.interfaces.addAll(interfaces);
     }
     if (mixins != null) {
-      $result.mixins.addAll(mixins);
+      _result.mixins.addAll(mixins);
     }
     if (superClass != null) {
-      $result.superClass = superClass;
+      _result.superClass = superClass;
     }
     if (constructors != null) {
-      $result.constructors.addAll(constructors);
+      _result.constructors.addAll(constructors);
     }
     if (fields != null) {
-      $result.fields.addAll(fields);
+      _result.fields.addAll(fields);
     }
     if (methods != null) {
-      $result.methods.addAll(methods);
+      _result.methods.addAll(methods);
     }
     if (getters != null) {
-      $result.getters.addAll(getters);
+      _result.getters.addAll(getters);
     }
     if (setters != null) {
-      $result.setters.addAll(setters);
+      _result.setters.addAll(setters);
     }
     if (staticFields != null) {
-      $result.staticFields.addAll(staticFields);
+      _result.staticFields.addAll(staticFields);
     }
     if (staticMethods != null) {
-      $result.staticMethods.addAll(staticMethods);
+      _result.staticMethods.addAll(staticMethods);
     }
     if (staticGetters != null) {
-      $result.staticGetters.addAll(staticGetters);
+      _result.staticGetters.addAll(staticGetters);
     }
     if (staticSetters != null) {
-      $result.staticSetters.addAll(staticSetters);
+      _result.staticSetters.addAll(staticSetters);
     }
-    return $result;
+    return _result;
   }
-  ClassElement._() : super();
   factory ClassElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ClassElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ClassElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOM<Identifier>(1, _omitFieldNames ? '' : 'identifier', subBuilder: Identifier.create)
-    ..aOB(2, _omitFieldNames ? '' : 'isAbstract')
-    ..aOB(3, _omitFieldNames ? '' : 'isBase')
-    ..aOB(4, _omitFieldNames ? '' : 'isFinal')
-    ..aOB(5, _omitFieldNames ? '' : 'isInterface')
-    ..aOB(6, _omitFieldNames ? '' : 'isMixin')
-    ..aOB(7, _omitFieldNames ? '' : 'isSealed')
-    ..pc<Identifier>(8, _omitFieldNames ? '' : 'interfaces', $pb.PbFieldType.PM, subBuilder: Identifier.create)
-    ..pc<Identifier>(9, _omitFieldNames ? '' : 'mixins', $pb.PbFieldType.PM, subBuilder: Identifier.create)
-    ..aOM<Identifier>(10, _omitFieldNames ? '' : 'superClass', subBuilder: Identifier.create)
-    ..pc<ConstructorElement>(11, _omitFieldNames ? '' : 'constructors', $pb.PbFieldType.PM, subBuilder: ConstructorElement.create)
-    ..pc<FieldElement>(12, _omitFieldNames ? '' : 'fields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FunctionElement>(13, _omitFieldNames ? '' : 'methods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<DartType>(14, _omitFieldNames ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..pc<DartType>(15, _omitFieldNames ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..pc<FieldElement>(16, _omitFieldNames ? '' : 'staticFields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FunctionElement>(17, _omitFieldNames ? '' : 'staticMethods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<DartType>(18, _omitFieldNames ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..pc<DartType>(19, _omitFieldNames ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: DartType.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -975,10 +947,8 @@ class ClassElement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ClassElement copyWith(void Function(ClassElement) updates) => super.copyWith((message) => updates(message as ClassElement)) as ClassElement;
-
+  ClassElement copyWith(void Function(ClassElement) updates) => super.copyWith((message) => updates(message as ClassElement)) as ClassElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static ClassElement create() => ClassElement._();
   ClassElement createEmptyInstance() => create();
@@ -990,11 +960,11 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Identifier get identifier => $_getN(0);
   @$pb.TagNumber(1)
-  set identifier(Identifier v) { $_setField(1, v); }
+  set identifier(Identifier v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIdentifier() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIdentifier() => $_clearField(1);
+  void clearIdentifier() => clearField(1);
   @$pb.TagNumber(1)
   Identifier ensureIdentifier() => $_ensure(0);
 
@@ -1005,7 +975,7 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIsAbstract() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsAbstract() => $_clearField(2);
+  void clearIsAbstract() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get isBase => $_getBF(2);
@@ -1014,7 +984,7 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasIsBase() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIsBase() => $_clearField(3);
+  void clearIsBase() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get isFinal => $_getBF(3);
@@ -1023,7 +993,7 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasIsFinal() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsFinal() => $_clearField(4);
+  void clearIsFinal() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get isInterface => $_getBF(4);
@@ -1032,7 +1002,7 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasIsInterface() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsInterface() => $_clearField(5);
+  void clearIsInterface() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.bool get isMixin => $_getBF(5);
@@ -1041,7 +1011,7 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasIsMixin() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIsMixin() => $_clearField(6);
+  void clearIsMixin() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.bool get isSealed => $_getBF(6);
@@ -1050,82 +1020,81 @@ class ClassElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool hasIsSealed() => $_has(6);
   @$pb.TagNumber(7)
-  void clearIsSealed() => $_clearField(7);
+  void clearIsSealed() => clearField(7);
 
   @$pb.TagNumber(8)
-  $pb.PbList<Identifier> get interfaces => $_getList(7);
+  $core.List<Identifier> get interfaces => $_getList(7);
 
   @$pb.TagNumber(9)
-  $pb.PbList<Identifier> get mixins => $_getList(8);
+  $core.List<Identifier> get mixins => $_getList(8);
 
   @$pb.TagNumber(10)
   Identifier get superClass => $_getN(9);
   @$pb.TagNumber(10)
-  set superClass(Identifier v) { $_setField(10, v); }
+  set superClass(Identifier v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasSuperClass() => $_has(9);
   @$pb.TagNumber(10)
-  void clearSuperClass() => $_clearField(10);
+  void clearSuperClass() => clearField(10);
   @$pb.TagNumber(10)
   Identifier ensureSuperClass() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $pb.PbList<ConstructorElement> get constructors => $_getList(10);
+  $core.List<ConstructorElement> get constructors => $_getList(10);
 
   @$pb.TagNumber(12)
-  $pb.PbList<FieldElement> get fields => $_getList(11);
+  $core.List<FieldElement> get fields => $_getList(11);
 
   @$pb.TagNumber(13)
-  $pb.PbList<FunctionElement> get methods => $_getList(12);
+  $core.List<FunctionElement> get methods => $_getList(12);
 
   @$pb.TagNumber(14)
-  $pb.PbList<DartType> get getters => $_getList(13);
+  $core.List<DartType> get getters => $_getList(13);
 
   @$pb.TagNumber(15)
-  $pb.PbList<DartType> get setters => $_getList(14);
+  $core.List<DartType> get setters => $_getList(14);
 
   @$pb.TagNumber(16)
-  $pb.PbList<FieldElement> get staticFields => $_getList(15);
+  $core.List<FieldElement> get staticFields => $_getList(15);
 
   @$pb.TagNumber(17)
-  $pb.PbList<FunctionElement> get staticMethods => $_getList(16);
+  $core.List<FunctionElement> get staticMethods => $_getList(16);
 
   @$pb.TagNumber(18)
-  $pb.PbList<DartType> get staticGetters => $_getList(17);
+  $core.List<DartType> get staticGetters => $_getList(17);
 
   @$pb.TagNumber(19)
-  $pb.PbList<DartType> get staticSetters => $_getList(18);
+  $core.List<DartType> get staticSetters => $_getList(18);
 }
 
 class ConstructorElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ConstructorElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isConst')
+    ..pc<ParameterElement>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
+    ..hasRequiredFields = false
+  ;
+
+  ConstructorElement._() : super();
   factory ConstructorElement({
     $core.String? name,
     $core.bool? isConst,
     $core.Iterable<ParameterElement>? parameters,
   }) {
-    final $result = create();
+    final _result = create();
     if (name != null) {
-      $result.name = name;
+      _result.name = name;
     }
     if (isConst != null) {
-      $result.isConst = isConst;
+      _result.isConst = isConst;
     }
     if (parameters != null) {
-      $result.parameters.addAll(parameters);
+      _result.parameters.addAll(parameters);
     }
-    return $result;
+    return _result;
   }
-  ConstructorElement._() : super();
   factory ConstructorElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ConstructorElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConstructorElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOB(2, _omitFieldNames ? '' : 'isConst')
-    ..pc<ParameterElement>(3, _omitFieldNames ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1135,10 +1104,8 @@ class ConstructorElement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ConstructorElement copyWith(void Function(ConstructorElement) updates) => super.copyWith((message) => updates(message as ConstructorElement)) as ConstructorElement;
-
+  ConstructorElement copyWith(void Function(ConstructorElement) updates) => super.copyWith((message) => updates(message as ConstructorElement)) as ConstructorElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static ConstructorElement create() => ConstructorElement._();
   ConstructorElement createEmptyInstance() => create();
@@ -1154,7 +1121,7 @@ class ConstructorElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => $_clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.bool get isConst => $_getBF(1);
@@ -1163,13 +1130,23 @@ class ConstructorElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIsConst() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsConst() => $_clearField(2);
+  void clearIsConst() => clearField(2);
 
   @$pb.TagNumber(3)
-  $pb.PbList<ParameterElement> get parameters => $_getList(2);
+  $core.List<ParameterElement> get parameters => $_getList(2);
 }
 
 class FieldElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FieldElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isConst')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isLate')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
+    ..aOM<DartType>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', subBuilder: DartType.create)
+    ..hasRequiredFields = false
+  ;
+
+  FieldElement._() : super();
   factory FieldElement({
     $core.String? name,
     $core.bool? isConst,
@@ -1177,37 +1154,26 @@ class FieldElement extends $pb.GeneratedMessage {
     $core.bool? isFinal,
     DartType? type,
   }) {
-    final $result = create();
+    final _result = create();
     if (name != null) {
-      $result.name = name;
+      _result.name = name;
     }
     if (isConst != null) {
-      $result.isConst = isConst;
+      _result.isConst = isConst;
     }
     if (isLate != null) {
-      $result.isLate = isLate;
+      _result.isLate = isLate;
     }
     if (isFinal != null) {
-      $result.isFinal = isFinal;
+      _result.isFinal = isFinal;
     }
     if (type != null) {
-      $result.type = type;
+      _result.type = type;
     }
-    return $result;
+    return _result;
   }
-  FieldElement._() : super();
   factory FieldElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FieldElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FieldElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOB(2, _omitFieldNames ? '' : 'isConst')
-    ..aOB(3, _omitFieldNames ? '' : 'isLate')
-    ..aOB(4, _omitFieldNames ? '' : 'isFinal')
-    ..aOM<DartType>(5, _omitFieldNames ? '' : 'type', subBuilder: DartType.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1217,10 +1183,8 @@ class FieldElement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FieldElement copyWith(void Function(FieldElement) updates) => super.copyWith((message) => updates(message as FieldElement)) as FieldElement;
-
+  FieldElement copyWith(void Function(FieldElement) updates) => super.copyWith((message) => updates(message as FieldElement)) as FieldElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static FieldElement create() => FieldElement._();
   FieldElement createEmptyInstance() => create();
@@ -1236,7 +1200,7 @@ class FieldElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => $_clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.bool get isConst => $_getBF(1);
@@ -1245,7 +1209,7 @@ class FieldElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIsConst() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsConst() => $_clearField(2);
+  void clearIsConst() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get isLate => $_getBF(2);
@@ -1254,7 +1218,7 @@ class FieldElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasIsLate() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIsLate() => $_clearField(3);
+  void clearIsLate() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get isFinal => $_getBF(3);
@@ -1263,21 +1227,31 @@ class FieldElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasIsFinal() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsFinal() => $_clearField(4);
+  void clearIsFinal() => clearField(4);
 
   @$pb.TagNumber(5)
   DartType get type => $_getN(4);
   @$pb.TagNumber(5)
-  set type(DartType v) { $_setField(5, v); }
+  set type(DartType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasType() => $_has(4);
   @$pb.TagNumber(5)
-  void clearType() => $_clearField(5);
+  void clearType() => clearField(5);
   @$pb.TagNumber(5)
   DartType ensureType() => $_ensure(4);
 }
 
 class FunctionElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FunctionElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
+    ..pc<ParameterElement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
+    ..aOM<DartType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'returnType', subBuilder: DartType.create)
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAsync')
+    ..hasRequiredFields = false
+  ;
+
+  FunctionElement._() : super();
   factory FunctionElement({
     Identifier? identifier,
     $core.Iterable<ParameterElement>? parameters,
@@ -1285,37 +1259,26 @@ class FunctionElement extends $pb.GeneratedMessage {
     $core.bool? isAbstract,
     $core.bool? isAsync,
   }) {
-    final $result = create();
+    final _result = create();
     if (identifier != null) {
-      $result.identifier = identifier;
+      _result.identifier = identifier;
     }
     if (parameters != null) {
-      $result.parameters.addAll(parameters);
+      _result.parameters.addAll(parameters);
     }
     if (returnType != null) {
-      $result.returnType = returnType;
+      _result.returnType = returnType;
     }
     if (isAbstract != null) {
-      $result.isAbstract = isAbstract;
+      _result.isAbstract = isAbstract;
     }
     if (isAsync != null) {
-      $result.isAsync = isAsync;
+      _result.isAsync = isAsync;
     }
-    return $result;
+    return _result;
   }
-  FunctionElement._() : super();
   factory FunctionElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FunctionElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FunctionElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOM<Identifier>(1, _omitFieldNames ? '' : 'identifier', subBuilder: Identifier.create)
-    ..pc<ParameterElement>(2, _omitFieldNames ? '' : 'parameters', $pb.PbFieldType.PM, subBuilder: ParameterElement.create)
-    ..aOM<DartType>(3, _omitFieldNames ? '' : 'returnType', subBuilder: DartType.create)
-    ..aOB(4, _omitFieldNames ? '' : 'isAbstract')
-    ..aOB(5, _omitFieldNames ? '' : 'isAsync')
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1325,10 +1288,8 @@ class FunctionElement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FunctionElement copyWith(void Function(FunctionElement) updates) => super.copyWith((message) => updates(message as FunctionElement)) as FunctionElement;
-
+  FunctionElement copyWith(void Function(FunctionElement) updates) => super.copyWith((message) => updates(message as FunctionElement)) as FunctionElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static FunctionElement create() => FunctionElement._();
   FunctionElement createEmptyInstance() => create();
@@ -1340,25 +1301,25 @@ class FunctionElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Identifier get identifier => $_getN(0);
   @$pb.TagNumber(1)
-  set identifier(Identifier v) { $_setField(1, v); }
+  set identifier(Identifier v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIdentifier() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIdentifier() => $_clearField(1);
+  void clearIdentifier() => clearField(1);
   @$pb.TagNumber(1)
   Identifier ensureIdentifier() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<ParameterElement> get parameters => $_getList(1);
+  $core.List<ParameterElement> get parameters => $_getList(1);
 
   @$pb.TagNumber(3)
   DartType get returnType => $_getN(2);
   @$pb.TagNumber(3)
-  set returnType(DartType v) { $_setField(3, v); }
+  set returnType(DartType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasReturnType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearReturnType() => $_clearField(3);
+  void clearReturnType() => clearField(3);
   @$pb.TagNumber(3)
   DartType ensureReturnType() => $_ensure(2);
 
@@ -1369,7 +1330,7 @@ class FunctionElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasIsAbstract() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsAbstract() => $_clearField(4);
+  void clearIsAbstract() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get isAsync => $_getBF(4);
@@ -1378,43 +1339,42 @@ class FunctionElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasIsAsync() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsAsync() => $_clearField(5);
+  void clearIsAsync() => clearField(5);
 }
 
 class LibraryElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LibraryElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uri')
+    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'importedLibraries')
+    ..pPS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exportedLibraries')
+    ..pc<Element>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topLevelElements', $pb.PbFieldType.PM, subBuilder: Element.create)
+    ..hasRequiredFields = false
+  ;
+
+  LibraryElement._() : super();
   factory LibraryElement({
     $core.String? uri,
     $core.Iterable<$core.String>? importedLibraries,
     $core.Iterable<$core.String>? exportedLibraries,
     $core.Iterable<Element>? topLevelElements,
   }) {
-    final $result = create();
+    final _result = create();
     if (uri != null) {
-      $result.uri = uri;
+      _result.uri = uri;
     }
     if (importedLibraries != null) {
-      $result.importedLibraries.addAll(importedLibraries);
+      _result.importedLibraries.addAll(importedLibraries);
     }
     if (exportedLibraries != null) {
-      $result.exportedLibraries.addAll(exportedLibraries);
+      _result.exportedLibraries.addAll(exportedLibraries);
     }
     if (topLevelElements != null) {
-      $result.topLevelElements.addAll(topLevelElements);
+      _result.topLevelElements.addAll(topLevelElements);
     }
-    return $result;
+    return _result;
   }
-  LibraryElement._() : super();
   factory LibraryElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory LibraryElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LibraryElement', package: const $pb.PackageName(_omitMessageNames ? '' : 'schema'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'uri')
-    ..pPS(2, _omitFieldNames ? '' : 'importedLibraries')
-    ..pPS(3, _omitFieldNames ? '' : 'exportedLibraries')
-    ..pc<Element>(4, _omitFieldNames ? '' : 'topLevelElements', $pb.PbFieldType.PM, subBuilder: Element.create)
-    ..hasRequiredFields = false
-  ;
-
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1424,10 +1384,8 @@ class LibraryElement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  LibraryElement copyWith(void Function(LibraryElement) updates) => super.copyWith((message) => updates(message as LibraryElement)) as LibraryElement;
-
+  LibraryElement copyWith(void Function(LibraryElement) updates) => super.copyWith((message) => updates(message as LibraryElement)) as LibraryElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
-
   @$core.pragma('dart2js:noInline')
   static LibraryElement create() => LibraryElement._();
   LibraryElement createEmptyInstance() => create();
@@ -1443,18 +1401,15 @@ class LibraryElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUri() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUri() => $_clearField(1);
+  void clearUri() => clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<$core.String> get importedLibraries => $_getList(1);
+  $core.List<$core.String> get importedLibraries => $_getList(1);
 
   @$pb.TagNumber(3)
-  $pb.PbList<$core.String> get exportedLibraries => $_getList(2);
+  $core.List<$core.String> get exportedLibraries => $_getList(2);
 
   @$pb.TagNumber(4)
-  $pb.PbList<Element> get topLevelElements => $_getList(3);
+  $core.List<Element> get topLevelElements => $_getList(3);
 }
 
-
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
