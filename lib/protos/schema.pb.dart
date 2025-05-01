@@ -74,6 +74,7 @@ enum DartType_Type {
   dynamicType, 
   functionType, 
   parameterizedType, 
+  voidType, 
   notSet
 }
 
@@ -82,10 +83,11 @@ class DartType extends $pb.GeneratedMessage {
     22 : DartType_Type.dynamicType,
     23 : DartType_Type.functionType,
     24 : DartType_Type.parameterizedType,
+    25 : DartType_Type.voidType,
     0 : DartType_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DartType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
-    ..oo(0, [22, 23, 24])
+    ..oo(0, [22, 23, 24, 25])
     ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFuture')
     ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFutureOr')
@@ -110,6 +112,7 @@ class DartType extends $pb.GeneratedMessage {
     ..aOM<DynamicType>(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dynamicType', subBuilder: DynamicType.create)
     ..aOM<FunctionType>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'functionType', subBuilder: FunctionType.create)
     ..aOM<ParameterizedType>(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameterizedType', subBuilder: ParameterizedType.create)
+    ..aOM<VoidType>(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voidType', subBuilder: VoidType.create)
     ..hasRequiredFields = false
   ;
 
@@ -139,6 +142,7 @@ class DartType extends $pb.GeneratedMessage {
     DynamicType? dynamicType,
     FunctionType? functionType,
     ParameterizedType? parameterizedType,
+    VoidType? voidType,
   }) {
     final _result = create();
     if (identifier != null) {
@@ -212,6 +216,9 @@ class DartType extends $pb.GeneratedMessage {
     }
     if (parameterizedType != null) {
       _result.parameterizedType = parameterizedType;
+    }
+    if (voidType != null) {
+      _result.voidType = voidType;
     }
     return _result;
   }
@@ -462,6 +469,17 @@ class DartType extends $pb.GeneratedMessage {
   void clearParameterizedType() => clearField(24);
   @$pb.TagNumber(24)
   ParameterizedType ensureParameterizedType() => $_ensure(23);
+
+  @$pb.TagNumber(25)
+  VoidType get voidType => $_getN(24);
+  @$pb.TagNumber(25)
+  set voidType(VoidType v) { setField(25, v); }
+  @$pb.TagNumber(25)
+  $core.bool hasVoidType() => $_has(24);
+  @$pb.TagNumber(25)
+  void clearVoidType() => clearField(25);
+  @$pb.TagNumber(25)
+  VoidType ensureVoidType() => $_ensure(24);
 }
 
 class DynamicType extends $pb.GeneratedMessage {
@@ -491,6 +509,35 @@ class DynamicType extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static DynamicType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DynamicType>(create);
   static DynamicType? _defaultInstance;
+}
+
+class VoidType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VoidType', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  VoidType._() : super();
+  factory VoidType() => create();
+  factory VoidType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VoidType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  VoidType clone() => VoidType()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  VoidType copyWith(void Function(VoidType) updates) => super.copyWith((message) => updates(message as VoidType)) as VoidType; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VoidType create() => VoidType._();
+  VoidType createEmptyInstance() => create();
+  static $pb.PbList<VoidType> createRepeated() => $pb.PbList<VoidType>();
+  @$core.pragma('dart2js:noInline')
+  static VoidType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VoidType>(create);
+  static VoidType? _defaultInstance;
 }
 
 class FunctionType extends $pb.GeneratedMessage {
@@ -764,14 +811,14 @@ class Element extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Element', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<ClassElement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'class', subBuilder: ClassElement.create)
+    ..aOM<InterfaceElement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'class', subBuilder: InterfaceElement.create)
     ..aOM<FunctionElement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: FunctionElement.create)
     ..hasRequiredFields = false
   ;
 
   Element._() : super();
   factory Element({
-    ClassElement? class_1,
+    InterfaceElement? class_1,
     FunctionElement? function,
   }) {
     final _result = create();
@@ -808,15 +855,15 @@ class Element extends $pb.GeneratedMessage {
   void clearElement() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  ClassElement get class_1 => $_getN(0);
+  InterfaceElement get class_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set class_1(ClassElement v) { setField(1, v); }
+  set class_1(InterfaceElement v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClass_1() => $_has(0);
   @$pb.TagNumber(1)
   void clearClass_1() => clearField(1);
   @$pb.TagNumber(1)
-  ClassElement ensureClass_1() => $_ensure(0);
+  InterfaceElement ensureClass_1() => $_ensure(0);
 
   @$pb.TagNumber(2)
   FunctionElement get function => $_getN(1);
@@ -830,39 +877,44 @@ class Element extends $pb.GeneratedMessage {
   FunctionElement ensureFunction() => $_ensure(1);
 }
 
-class ClassElement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClassElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+enum InterfaceElement_Element {
+  class_14, 
+  enum_15, 
+  mixin, 
+  notSet
+}
+
+class InterfaceElement extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, InterfaceElement_Element> _InterfaceElement_ElementByTag = {
+    14 : InterfaceElement_Element.class_14,
+    15 : InterfaceElement_Element.enum_15,
+    16 : InterfaceElement_Element.mixin,
+    0 : InterfaceElement_Element.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'InterfaceElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..oo(0, [14, 15, 16])
     ..aOM<Identifier>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identifier', subBuilder: Identifier.create)
-    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBase')
-    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
-    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isInterface')
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isMixin')
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSealed')
-    ..pc<Identifier>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'interfaces', $pb.PbFieldType.PM, subBuilder: Identifier.create)
-    ..pc<Identifier>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mixins', $pb.PbFieldType.PM, subBuilder: Identifier.create)
-    ..aOM<Identifier>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'superClass', subBuilder: Identifier.create)
-    ..pc<ConstructorElement>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'constructors', $pb.PbFieldType.PM, subBuilder: ConstructorElement.create)
-    ..pc<FieldElement>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FunctionElement>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'methods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<FieldElement>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FieldElement>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FieldElement>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticFields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FunctionElement>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticMethods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
-    ..pc<FieldElement>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
-    ..pc<FieldElement>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<Identifier>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'interfaces', $pb.PbFieldType.PM, subBuilder: Identifier.create)
+    ..pc<Identifier>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mixins', $pb.PbFieldType.PM, subBuilder: Identifier.create)
+    ..aOM<Identifier>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'superClass', subBuilder: Identifier.create)
+    ..pc<ConstructorElement>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'constructors', $pb.PbFieldType.PM, subBuilder: ConstructorElement.create)
+    ..pc<FieldElement>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FunctionElement>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'methods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
+    ..pc<FieldElement>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FieldElement>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FieldElement>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticFields', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FunctionElement>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticMethods', $pb.PbFieldType.PM, subBuilder: FunctionElement.create)
+    ..pc<FieldElement>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticGetters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..pc<FieldElement>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticSetters', $pb.PbFieldType.PM, subBuilder: FieldElement.create)
+    ..aOM<ClassElement>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'class', subBuilder: ClassElement.create)
+    ..aOM<EnumElement>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'enum', subBuilder: EnumElement.create)
+    ..aOM<MixinElement>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mixin', subBuilder: MixinElement.create)
     ..hasRequiredFields = false
   ;
 
-  ClassElement._() : super();
-  factory ClassElement({
+  InterfaceElement._() : super();
+  factory InterfaceElement({
     Identifier? identifier,
-    $core.bool? isAbstract,
-    $core.bool? isBase,
-    $core.bool? isFinal,
-    $core.bool? isInterface,
-    $core.bool? isMixin,
-    $core.bool? isSealed,
     $core.Iterable<Identifier>? interfaces,
     $core.Iterable<Identifier>? mixins,
     Identifier? superClass,
@@ -875,28 +927,13 @@ class ClassElement extends $pb.GeneratedMessage {
     $core.Iterable<FunctionElement>? staticMethods,
     $core.Iterable<FieldElement>? staticGetters,
     $core.Iterable<FieldElement>? staticSetters,
+    ClassElement? class_14,
+    EnumElement? enum_15,
+    MixinElement? mixin,
   }) {
     final _result = create();
     if (identifier != null) {
       _result.identifier = identifier;
-    }
-    if (isAbstract != null) {
-      _result.isAbstract = isAbstract;
-    }
-    if (isBase != null) {
-      _result.isBase = isBase;
-    }
-    if (isFinal != null) {
-      _result.isFinal = isFinal;
-    }
-    if (isInterface != null) {
-      _result.isInterface = isInterface;
-    }
-    if (isMixin != null) {
-      _result.isMixin = isMixin;
-    }
-    if (isSealed != null) {
-      _result.isSealed = isSealed;
     }
     if (interfaces != null) {
       _result.interfaces.addAll(interfaces);
@@ -934,6 +971,169 @@ class ClassElement extends $pb.GeneratedMessage {
     if (staticSetters != null) {
       _result.staticSetters.addAll(staticSetters);
     }
+    if (class_14 != null) {
+      _result.class_14 = class_14;
+    }
+    if (enum_15 != null) {
+      _result.enum_15 = enum_15;
+    }
+    if (mixin != null) {
+      _result.mixin = mixin;
+    }
+    return _result;
+  }
+  factory InterfaceElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory InterfaceElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  InterfaceElement clone() => InterfaceElement()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  InterfaceElement copyWith(void Function(InterfaceElement) updates) => super.copyWith((message) => updates(message as InterfaceElement)) as InterfaceElement; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static InterfaceElement create() => InterfaceElement._();
+  InterfaceElement createEmptyInstance() => create();
+  static $pb.PbList<InterfaceElement> createRepeated() => $pb.PbList<InterfaceElement>();
+  @$core.pragma('dart2js:noInline')
+  static InterfaceElement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<InterfaceElement>(create);
+  static InterfaceElement? _defaultInstance;
+
+  InterfaceElement_Element whichElement() => _InterfaceElement_ElementByTag[$_whichOneof(0)]!;
+  void clearElement() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Identifier get identifier => $_getN(0);
+  @$pb.TagNumber(1)
+  set identifier(Identifier v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIdentifier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIdentifier() => clearField(1);
+  @$pb.TagNumber(1)
+  Identifier ensureIdentifier() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.List<Identifier> get interfaces => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<Identifier> get mixins => $_getList(2);
+
+  @$pb.TagNumber(4)
+  Identifier get superClass => $_getN(3);
+  @$pb.TagNumber(4)
+  set superClass(Identifier v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSuperClass() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSuperClass() => clearField(4);
+  @$pb.TagNumber(4)
+  Identifier ensureSuperClass() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.List<ConstructorElement> get constructors => $_getList(4);
+
+  @$pb.TagNumber(6)
+  $core.List<FieldElement> get fields => $_getList(5);
+
+  @$pb.TagNumber(7)
+  $core.List<FunctionElement> get methods => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $core.List<FieldElement> get getters => $_getList(7);
+
+  @$pb.TagNumber(9)
+  $core.List<FieldElement> get setters => $_getList(8);
+
+  @$pb.TagNumber(10)
+  $core.List<FieldElement> get staticFields => $_getList(9);
+
+  @$pb.TagNumber(11)
+  $core.List<FunctionElement> get staticMethods => $_getList(10);
+
+  @$pb.TagNumber(12)
+  $core.List<FieldElement> get staticGetters => $_getList(11);
+
+  @$pb.TagNumber(13)
+  $core.List<FieldElement> get staticSetters => $_getList(12);
+
+  @$pb.TagNumber(14)
+  ClassElement get class_14 => $_getN(13);
+  @$pb.TagNumber(14)
+  set class_14(ClassElement v) { setField(14, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasClass_14() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearClass_14() => clearField(14);
+  @$pb.TagNumber(14)
+  ClassElement ensureClass_14() => $_ensure(13);
+
+  @$pb.TagNumber(15)
+  EnumElement get enum_15 => $_getN(14);
+  @$pb.TagNumber(15)
+  set enum_15(EnumElement v) { setField(15, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasEnum_15() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearEnum_15() => clearField(15);
+  @$pb.TagNumber(15)
+  EnumElement ensureEnum_15() => $_ensure(14);
+
+  @$pb.TagNumber(16)
+  MixinElement get mixin => $_getN(15);
+  @$pb.TagNumber(16)
+  set mixin(MixinElement v) { setField(16, v); }
+  @$pb.TagNumber(16)
+  $core.bool hasMixin() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearMixin() => clearField(16);
+  @$pb.TagNumber(16)
+  MixinElement ensureMixin() => $_ensure(15);
+}
+
+class ClassElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClassElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAbstract')
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBase')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isInterface')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isMixin')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSealed')
+    ..hasRequiredFields = false
+  ;
+
+  ClassElement._() : super();
+  factory ClassElement({
+    $core.bool? isAbstract,
+    $core.bool? isBase,
+    $core.bool? isFinal,
+    $core.bool? isInterface,
+    $core.bool? isMixin,
+    $core.bool? isSealed,
+  }) {
+    final _result = create();
+    if (isAbstract != null) {
+      _result.isAbstract = isAbstract;
+    }
+    if (isBase != null) {
+      _result.isBase = isBase;
+    }
+    if (isFinal != null) {
+      _result.isFinal = isFinal;
+    }
+    if (isInterface != null) {
+      _result.isInterface = isInterface;
+    }
+    if (isMixin != null) {
+      _result.isMixin = isMixin;
+    }
+    if (isSealed != null) {
+      _result.isSealed = isSealed;
+    }
     return _result;
   }
   factory ClassElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
@@ -958,113 +1158,134 @@ class ClassElement extends $pb.GeneratedMessage {
   static ClassElement? _defaultInstance;
 
   @$pb.TagNumber(1)
-  Identifier get identifier => $_getN(0);
+  $core.bool get isAbstract => $_getBF(0);
   @$pb.TagNumber(1)
-  set identifier(Identifier v) { setField(1, v); }
+  set isAbstract($core.bool v) { $_setBool(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasIdentifier() => $_has(0);
+  $core.bool hasIsAbstract() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIdentifier() => clearField(1);
-  @$pb.TagNumber(1)
-  Identifier ensureIdentifier() => $_ensure(0);
+  void clearIsAbstract() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.bool get isAbstract => $_getBF(1);
+  $core.bool get isBase => $_getBF(1);
   @$pb.TagNumber(2)
-  set isAbstract($core.bool v) { $_setBool(1, v); }
+  set isBase($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasIsAbstract() => $_has(1);
+  $core.bool hasIsBase() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsAbstract() => clearField(2);
+  void clearIsBase() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.bool get isBase => $_getBF(2);
+  $core.bool get isFinal => $_getBF(2);
   @$pb.TagNumber(3)
-  set isBase($core.bool v) { $_setBool(2, v); }
+  set isFinal($core.bool v) { $_setBool(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasIsBase() => $_has(2);
+  $core.bool hasIsFinal() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIsBase() => clearField(3);
+  void clearIsFinal() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.bool get isFinal => $_getBF(3);
+  $core.bool get isInterface => $_getBF(3);
   @$pb.TagNumber(4)
-  set isFinal($core.bool v) { $_setBool(3, v); }
+  set isInterface($core.bool v) { $_setBool(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasIsFinal() => $_has(3);
+  $core.bool hasIsInterface() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsFinal() => clearField(4);
+  void clearIsInterface() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get isInterface => $_getBF(4);
+  $core.bool get isMixin => $_getBF(4);
   @$pb.TagNumber(5)
-  set isInterface($core.bool v) { $_setBool(4, v); }
+  set isMixin($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasIsInterface() => $_has(4);
+  $core.bool hasIsMixin() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsInterface() => clearField(5);
+  void clearIsMixin() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.bool get isMixin => $_getBF(5);
+  $core.bool get isSealed => $_getBF(5);
   @$pb.TagNumber(6)
-  set isMixin($core.bool v) { $_setBool(5, v); }
+  set isSealed($core.bool v) { $_setBool(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasIsMixin() => $_has(5);
+  $core.bool hasIsSealed() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIsMixin() => clearField(6);
+  void clearIsSealed() => clearField(6);
+}
 
-  @$pb.TagNumber(7)
-  $core.bool get isSealed => $_getBF(6);
-  @$pb.TagNumber(7)
-  set isSealed($core.bool v) { $_setBool(6, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasIsSealed() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearIsSealed() => clearField(7);
+class EnumElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EnumElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
 
-  @$pb.TagNumber(8)
-  $core.List<Identifier> get interfaces => $_getList(7);
+  EnumElement._() : super();
+  factory EnumElement() => create();
+  factory EnumElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EnumElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  EnumElement clone() => EnumElement()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EnumElement copyWith(void Function(EnumElement) updates) => super.copyWith((message) => updates(message as EnumElement)) as EnumElement; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EnumElement create() => EnumElement._();
+  EnumElement createEmptyInstance() => create();
+  static $pb.PbList<EnumElement> createRepeated() => $pb.PbList<EnumElement>();
+  @$core.pragma('dart2js:noInline')
+  static EnumElement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnumElement>(create);
+  static EnumElement? _defaultInstance;
+}
 
-  @$pb.TagNumber(9)
-  $core.List<Identifier> get mixins => $_getList(8);
+class MixinElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MixinElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isBase')
+    ..hasRequiredFields = false
+  ;
 
-  @$pb.TagNumber(10)
-  Identifier get superClass => $_getN(9);
-  @$pb.TagNumber(10)
-  set superClass(Identifier v) { setField(10, v); }
-  @$pb.TagNumber(10)
-  $core.bool hasSuperClass() => $_has(9);
-  @$pb.TagNumber(10)
-  void clearSuperClass() => clearField(10);
-  @$pb.TagNumber(10)
-  Identifier ensureSuperClass() => $_ensure(9);
+  MixinElement._() : super();
+  factory MixinElement({
+    $core.bool? isBase,
+  }) {
+    final _result = create();
+    if (isBase != null) {
+      _result.isBase = isBase;
+    }
+    return _result;
+  }
+  factory MixinElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MixinElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MixinElement clone() => MixinElement()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MixinElement copyWith(void Function(MixinElement) updates) => super.copyWith((message) => updates(message as MixinElement)) as MixinElement; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MixinElement create() => MixinElement._();
+  MixinElement createEmptyInstance() => create();
+  static $pb.PbList<MixinElement> createRepeated() => $pb.PbList<MixinElement>();
+  @$core.pragma('dart2js:noInline')
+  static MixinElement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MixinElement>(create);
+  static MixinElement? _defaultInstance;
 
-  @$pb.TagNumber(11)
-  $core.List<ConstructorElement> get constructors => $_getList(10);
-
-  @$pb.TagNumber(12)
-  $core.List<FieldElement> get fields => $_getList(11);
-
-  @$pb.TagNumber(13)
-  $core.List<FunctionElement> get methods => $_getList(12);
-
-  @$pb.TagNumber(14)
-  $core.List<FieldElement> get getters => $_getList(13);
-
-  @$pb.TagNumber(15)
-  $core.List<FieldElement> get setters => $_getList(14);
-
-  @$pb.TagNumber(16)
-  $core.List<FieldElement> get staticFields => $_getList(15);
-
-  @$pb.TagNumber(17)
-  $core.List<FunctionElement> get staticMethods => $_getList(16);
-
-  @$pb.TagNumber(18)
-  $core.List<FieldElement> get staticGetters => $_getList(17);
-
-  @$pb.TagNumber(19)
-  $core.List<FieldElement> get staticSetters => $_getList(18);
+  @$pb.TagNumber(1)
+  $core.bool get isBase => $_getBF(0);
+  @$pb.TagNumber(1)
+  set isBase($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIsBase() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIsBase() => clearField(1);
 }
 
 class ConstructorElement extends $pb.GeneratedMessage {

@@ -47,6 +47,7 @@ const DartType$json = const {
     const {'1': 'dynamic_type', '3': 22, '4': 1, '5': 11, '6': '.schema.DynamicType', '9': 0, '10': 'dynamicType'},
     const {'1': 'function_type', '3': 23, '4': 1, '5': 11, '6': '.schema.FunctionType', '9': 0, '10': 'functionType'},
     const {'1': 'parameterized_type', '3': 24, '4': 1, '5': 11, '6': '.schema.ParameterizedType', '9': 0, '10': 'parameterizedType'},
+    const {'1': 'void_type', '3': 25, '4': 1, '5': 11, '6': '.schema.VoidType', '9': 0, '10': 'voidType'},
   ],
   '8': const [
     const {'1': 'type'},
@@ -54,7 +55,7 @@ const DartType$json = const {
 };
 
 /// Descriptor for `DartType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dartTypeDescriptor = $convert.base64Decode('CghEYXJ0VHlwZRIyCgppZGVudGlmaWVyGAEgASgLMhIuc2NoZW1hLklkZW50aWZpZXJSCmlkZW50aWZpZXISGwoJaXNfZnV0dXJlGAIgASgIUghpc0Z1dHVyZRIgCgxpc19mdXR1cmVfb3IYAyABKAhSCmlzRnV0dXJlT3ISGwoJaXNfc3RyZWFtGAQgASgIUghpc1N0cmVhbRIXCgdpc19ib29sGAUgASgIUgZpc0Jvb2wSGwoJaXNfZG91YmxlGAYgASgIUghpc0RvdWJsZRIXCgdpc19lbnVtGAcgASgIUgZpc0VudW0SHwoLaXNfZnVuY3Rpb24YCCABKAhSCmlzRnVuY3Rpb24SFQoGaXNfaW50GAkgASgIUgVpc0ludBIfCgtpc19pdGVyYWJsZRgKIAEoCFIKaXNJdGVyYWJsZRIXCgdpc19saXN0GAsgASgIUgZpc0xpc3QSFQoGaXNfbWFwGAwgASgIUgVpc01hcBIXCgdpc19udWxsGA0gASgIUgZpc051bGwSFQoGaXNfbnVtGA4gASgIUgVpc051bRIbCglpc19vYmplY3QYDyABKAhSCGlzT2JqZWN0EhsKCWlzX3JlY29yZBgQIAEoCFIIaXNSZWNvcmQSFQoGaXNfc2V0GBEgASgIUgVpc1NldBIbCglpc19zdHJpbmcYEiABKAhSCGlzU3RyaW5nEhsKCWlzX3N5bWJvbBgTIAEoCFIIaXNTeW1ib2wSFwoHaXNfdHlwZRgUIAEoCFIGaXNUeXBlEhoKCG51bGxhYmxlGBUgASgIUghudWxsYWJsZRI4CgxkeW5hbWljX3R5cGUYFiABKAsyEy5zY2hlbWEuRHluYW1pY1R5cGVIAFILZHluYW1pY1R5cGUSOwoNZnVuY3Rpb25fdHlwZRgXIAEoCzIULnNjaGVtYS5GdW5jdGlvblR5cGVIAFIMZnVuY3Rpb25UeXBlEkoKEnBhcmFtZXRlcml6ZWRfdHlwZRgYIAEoCzIZLnNjaGVtYS5QYXJhbWV0ZXJpemVkVHlwZUgAUhFwYXJhbWV0ZXJpemVkVHlwZUIGCgR0eXBl');
+final $typed_data.Uint8List dartTypeDescriptor = $convert.base64Decode('CghEYXJ0VHlwZRIyCgppZGVudGlmaWVyGAEgASgLMhIuc2NoZW1hLklkZW50aWZpZXJSCmlkZW50aWZpZXISGwoJaXNfZnV0dXJlGAIgASgIUghpc0Z1dHVyZRIgCgxpc19mdXR1cmVfb3IYAyABKAhSCmlzRnV0dXJlT3ISGwoJaXNfc3RyZWFtGAQgASgIUghpc1N0cmVhbRIXCgdpc19ib29sGAUgASgIUgZpc0Jvb2wSGwoJaXNfZG91YmxlGAYgASgIUghpc0RvdWJsZRIXCgdpc19lbnVtGAcgASgIUgZpc0VudW0SHwoLaXNfZnVuY3Rpb24YCCABKAhSCmlzRnVuY3Rpb24SFQoGaXNfaW50GAkgASgIUgVpc0ludBIfCgtpc19pdGVyYWJsZRgKIAEoCFIKaXNJdGVyYWJsZRIXCgdpc19saXN0GAsgASgIUgZpc0xpc3QSFQoGaXNfbWFwGAwgASgIUgVpc01hcBIXCgdpc19udWxsGA0gASgIUgZpc051bGwSFQoGaXNfbnVtGA4gASgIUgVpc051bRIbCglpc19vYmplY3QYDyABKAhSCGlzT2JqZWN0EhsKCWlzX3JlY29yZBgQIAEoCFIIaXNSZWNvcmQSFQoGaXNfc2V0GBEgASgIUgVpc1NldBIbCglpc19zdHJpbmcYEiABKAhSCGlzU3RyaW5nEhsKCWlzX3N5bWJvbBgTIAEoCFIIaXNTeW1ib2wSFwoHaXNfdHlwZRgUIAEoCFIGaXNUeXBlEhoKCG51bGxhYmxlGBUgASgIUghudWxsYWJsZRI4CgxkeW5hbWljX3R5cGUYFiABKAsyEy5zY2hlbWEuRHluYW1pY1R5cGVIAFILZHluYW1pY1R5cGUSOwoNZnVuY3Rpb25fdHlwZRgXIAEoCzIULnNjaGVtYS5GdW5jdGlvblR5cGVIAFIMZnVuY3Rpb25UeXBlEkoKEnBhcmFtZXRlcml6ZWRfdHlwZRgYIAEoCzIZLnNjaGVtYS5QYXJhbWV0ZXJpemVkVHlwZUgAUhFwYXJhbWV0ZXJpemVkVHlwZRIvCgl2b2lkX3R5cGUYGSABKAsyEC5zY2hlbWEuVm9pZFR5cGVIAFIIdm9pZFR5cGVCBgoEdHlwZQ==');
 @$core.Deprecated('Use dynamicTypeDescriptor instead')
 const DynamicType$json = const {
   '1': 'DynamicType',
@@ -62,6 +63,13 @@ const DynamicType$json = const {
 
 /// Descriptor for `DynamicType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dynamicTypeDescriptor = $convert.base64Decode('CgtEeW5hbWljVHlwZQ==');
+@$core.Deprecated('Use voidTypeDescriptor instead')
+const VoidType$json = const {
+  '1': 'VoidType',
+};
+
+/// Descriptor for `VoidType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List voidTypeDescriptor = $convert.base64Decode('CghWb2lkVHlwZQ==');
 @$core.Deprecated('Use functionTypeDescriptor instead')
 const FunctionType$json = const {
   '1': 'FunctionType',
@@ -117,7 +125,7 @@ final $typed_data.Uint8List parameterElementDescriptor = $convert.base64Decode('
 const Element$json = const {
   '1': 'Element',
   '2': const [
-    const {'1': 'class', '3': 1, '4': 1, '5': 11, '6': '.schema.ClassElement', '9': 0, '10': 'class'},
+    const {'1': 'class', '3': 1, '4': 1, '5': 11, '6': '.schema.InterfaceElement', '9': 0, '10': 'class'},
     const {'1': 'function', '3': 2, '4': 1, '5': 11, '6': '.schema.FunctionElement', '9': 0, '10': 'function'},
   ],
   '8': const [
@@ -126,35 +134,67 @@ const Element$json = const {
 };
 
 /// Descriptor for `Element`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List elementDescriptor = $convert.base64Decode('CgdFbGVtZW50EiwKBWNsYXNzGAEgASgLMhQuc2NoZW1hLkNsYXNzRWxlbWVudEgAUgVjbGFzcxI1CghmdW5jdGlvbhgCIAEoCzIXLnNjaGVtYS5GdW5jdGlvbkVsZW1lbnRIAFIIZnVuY3Rpb25CCQoHZWxlbWVudA==');
+final $typed_data.Uint8List elementDescriptor = $convert.base64Decode('CgdFbGVtZW50EjAKBWNsYXNzGAEgASgLMhguc2NoZW1hLkludGVyZmFjZUVsZW1lbnRIAFIFY2xhc3MSNQoIZnVuY3Rpb24YAiABKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50SABSCGZ1bmN0aW9uQgkKB2VsZW1lbnQ=');
+@$core.Deprecated('Use interfaceElementDescriptor instead')
+const InterfaceElement$json = const {
+  '1': 'InterfaceElement',
+  '2': const [
+    const {'1': 'identifier', '3': 1, '4': 1, '5': 11, '6': '.schema.Identifier', '10': 'identifier'},
+    const {'1': 'interfaces', '3': 2, '4': 3, '5': 11, '6': '.schema.Identifier', '10': 'interfaces'},
+    const {'1': 'mixins', '3': 3, '4': 3, '5': 11, '6': '.schema.Identifier', '10': 'mixins'},
+    const {'1': 'super_class', '3': 4, '4': 1, '5': 11, '6': '.schema.Identifier', '10': 'superClass'},
+    const {'1': 'constructors', '3': 5, '4': 3, '5': 11, '6': '.schema.ConstructorElement', '10': 'constructors'},
+    const {'1': 'fields', '3': 6, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'fields'},
+    const {'1': 'methods', '3': 7, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'methods'},
+    const {'1': 'getters', '3': 8, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'getters'},
+    const {'1': 'setters', '3': 9, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'setters'},
+    const {'1': 'static_fields', '3': 10, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticFields'},
+    const {'1': 'static_methods', '3': 11, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'staticMethods'},
+    const {'1': 'static_getters', '3': 12, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticGetters'},
+    const {'1': 'static_setters', '3': 13, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticSetters'},
+    const {'1': 'class', '3': 14, '4': 1, '5': 11, '6': '.schema.ClassElement', '9': 0, '10': 'class'},
+    const {'1': 'enum', '3': 15, '4': 1, '5': 11, '6': '.schema.EnumElement', '9': 0, '10': 'enum'},
+    const {'1': 'mixin', '3': 16, '4': 1, '5': 11, '6': '.schema.MixinElement', '9': 0, '10': 'mixin'},
+  ],
+  '8': const [
+    const {'1': 'element'},
+  ],
+};
+
+/// Descriptor for `InterfaceElement`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List interfaceElementDescriptor = $convert.base64Decode('ChBJbnRlcmZhY2VFbGVtZW50EjIKCmlkZW50aWZpZXIYASABKAsyEi5zY2hlbWEuSWRlbnRpZmllclIKaWRlbnRpZmllchIyCgppbnRlcmZhY2VzGAIgAygLMhIuc2NoZW1hLklkZW50aWZpZXJSCmludGVyZmFjZXMSKgoGbWl4aW5zGAMgAygLMhIuc2NoZW1hLklkZW50aWZpZXJSBm1peGlucxIzCgtzdXBlcl9jbGFzcxgEIAEoCzISLnNjaGVtYS5JZGVudGlmaWVyUgpzdXBlckNsYXNzEj4KDGNvbnN0cnVjdG9ycxgFIAMoCzIaLnNjaGVtYS5Db25zdHJ1Y3RvckVsZW1lbnRSDGNvbnN0cnVjdG9ycxIsCgZmaWVsZHMYBiADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgZmaWVsZHMSMQoHbWV0aG9kcxgHIAMoCzIXLnNjaGVtYS5GdW5jdGlvbkVsZW1lbnRSB21ldGhvZHMSLgoHZ2V0dGVycxgIIAMoCzIULnNjaGVtYS5GaWVsZEVsZW1lbnRSB2dldHRlcnMSLgoHc2V0dGVycxgJIAMoCzIULnNjaGVtYS5GaWVsZEVsZW1lbnRSB3NldHRlcnMSOQoNc3RhdGljX2ZpZWxkcxgKIAMoCzIULnNjaGVtYS5GaWVsZEVsZW1lbnRSDHN0YXRpY0ZpZWxkcxI+Cg5zdGF0aWNfbWV0aG9kcxgLIAMoCzIXLnNjaGVtYS5GdW5jdGlvbkVsZW1lbnRSDXN0YXRpY01ldGhvZHMSOwoOc3RhdGljX2dldHRlcnMYDCADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50Ug1zdGF0aWNHZXR0ZXJzEjsKDnN0YXRpY19zZXR0ZXJzGA0gAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFINc3RhdGljU2V0dGVycxIsCgVjbGFzcxgOIAEoCzIULnNjaGVtYS5DbGFzc0VsZW1lbnRIAFIFY2xhc3MSKQoEZW51bRgPIAEoCzITLnNjaGVtYS5FbnVtRWxlbWVudEgAUgRlbnVtEiwKBW1peGluGBAgASgLMhQuc2NoZW1hLk1peGluRWxlbWVudEgAUgVtaXhpbkIJCgdlbGVtZW50');
 @$core.Deprecated('Use classElementDescriptor instead')
 const ClassElement$json = const {
   '1': 'ClassElement',
   '2': const [
-    const {'1': 'identifier', '3': 1, '4': 1, '5': 11, '6': '.schema.Identifier', '10': 'identifier'},
-    const {'1': 'is_abstract', '3': 2, '4': 1, '5': 8, '10': 'isAbstract'},
-    const {'1': 'is_base', '3': 3, '4': 1, '5': 8, '10': 'isBase'},
-    const {'1': 'is_final', '3': 4, '4': 1, '5': 8, '10': 'isFinal'},
-    const {'1': 'is_interface', '3': 5, '4': 1, '5': 8, '10': 'isInterface'},
-    const {'1': 'is_mixin', '3': 6, '4': 1, '5': 8, '10': 'isMixin'},
-    const {'1': 'is_sealed', '3': 7, '4': 1, '5': 8, '10': 'isSealed'},
-    const {'1': 'interfaces', '3': 8, '4': 3, '5': 11, '6': '.schema.Identifier', '10': 'interfaces'},
-    const {'1': 'mixins', '3': 9, '4': 3, '5': 11, '6': '.schema.Identifier', '10': 'mixins'},
-    const {'1': 'super_class', '3': 10, '4': 1, '5': 11, '6': '.schema.Identifier', '10': 'superClass'},
-    const {'1': 'constructors', '3': 11, '4': 3, '5': 11, '6': '.schema.ConstructorElement', '10': 'constructors'},
-    const {'1': 'fields', '3': 12, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'fields'},
-    const {'1': 'methods', '3': 13, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'methods'},
-    const {'1': 'getters', '3': 14, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'getters'},
-    const {'1': 'setters', '3': 15, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'setters'},
-    const {'1': 'static_fields', '3': 16, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticFields'},
-    const {'1': 'static_methods', '3': 17, '4': 3, '5': 11, '6': '.schema.FunctionElement', '10': 'staticMethods'},
-    const {'1': 'static_getters', '3': 18, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticGetters'},
-    const {'1': 'static_setters', '3': 19, '4': 3, '5': 11, '6': '.schema.FieldElement', '10': 'staticSetters'},
+    const {'1': 'is_abstract', '3': 1, '4': 1, '5': 8, '10': 'isAbstract'},
+    const {'1': 'is_base', '3': 2, '4': 1, '5': 8, '10': 'isBase'},
+    const {'1': 'is_final', '3': 3, '4': 1, '5': 8, '10': 'isFinal'},
+    const {'1': 'is_interface', '3': 4, '4': 1, '5': 8, '10': 'isInterface'},
+    const {'1': 'is_mixin', '3': 5, '4': 1, '5': 8, '10': 'isMixin'},
+    const {'1': 'is_sealed', '3': 6, '4': 1, '5': 8, '10': 'isSealed'},
   ],
 };
 
 /// Descriptor for `ClassElement`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List classElementDescriptor = $convert.base64Decode('CgxDbGFzc0VsZW1lbnQSMgoKaWRlbnRpZmllchgBIAEoCzISLnNjaGVtYS5JZGVudGlmaWVyUgppZGVudGlmaWVyEh8KC2lzX2Fic3RyYWN0GAIgASgIUgppc0Fic3RyYWN0EhcKB2lzX2Jhc2UYAyABKAhSBmlzQmFzZRIZCghpc19maW5hbBgEIAEoCFIHaXNGaW5hbBIhCgxpc19pbnRlcmZhY2UYBSABKAhSC2lzSW50ZXJmYWNlEhkKCGlzX21peGluGAYgASgIUgdpc01peGluEhsKCWlzX3NlYWxlZBgHIAEoCFIIaXNTZWFsZWQSMgoKaW50ZXJmYWNlcxgIIAMoCzISLnNjaGVtYS5JZGVudGlmaWVyUgppbnRlcmZhY2VzEioKBm1peGlucxgJIAMoCzISLnNjaGVtYS5JZGVudGlmaWVyUgZtaXhpbnMSMwoLc3VwZXJfY2xhc3MYCiABKAsyEi5zY2hlbWEuSWRlbnRpZmllclIKc3VwZXJDbGFzcxI+Cgxjb25zdHJ1Y3RvcnMYCyADKAsyGi5zY2hlbWEuQ29uc3RydWN0b3JFbGVtZW50Ugxjb25zdHJ1Y3RvcnMSLAoGZmllbGRzGAwgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFIGZmllbGRzEjEKB21ldGhvZHMYDSADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50UgdtZXRob2RzEi4KB2dldHRlcnMYDiADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgdnZXR0ZXJzEi4KB3NldHRlcnMYDyADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgdzZXR0ZXJzEjkKDXN0YXRpY19maWVsZHMYECADKAsyFC5zY2hlbWEuRmllbGRFbGVtZW50UgxzdGF0aWNGaWVsZHMSPgoOc3RhdGljX21ldGhvZHMYESADKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50Ug1zdGF0aWNNZXRob2RzEjsKDnN0YXRpY19nZXR0ZXJzGBIgAygLMhQuc2NoZW1hLkZpZWxkRWxlbWVudFINc3RhdGljR2V0dGVycxI7Cg5zdGF0aWNfc2V0dGVycxgTIAMoCzIULnNjaGVtYS5GaWVsZEVsZW1lbnRSDXN0YXRpY1NldHRlcnM=');
+final $typed_data.Uint8List classElementDescriptor = $convert.base64Decode('CgxDbGFzc0VsZW1lbnQSHwoLaXNfYWJzdHJhY3QYASABKAhSCmlzQWJzdHJhY3QSFwoHaXNfYmFzZRgCIAEoCFIGaXNCYXNlEhkKCGlzX2ZpbmFsGAMgASgIUgdpc0ZpbmFsEiEKDGlzX2ludGVyZmFjZRgEIAEoCFILaXNJbnRlcmZhY2USGQoIaXNfbWl4aW4YBSABKAhSB2lzTWl4aW4SGwoJaXNfc2VhbGVkGAYgASgIUghpc1NlYWxlZA==');
+@$core.Deprecated('Use enumElementDescriptor instead')
+const EnumElement$json = const {
+  '1': 'EnumElement',
+};
+
+/// Descriptor for `EnumElement`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enumElementDescriptor = $convert.base64Decode('CgtFbnVtRWxlbWVudA==');
+@$core.Deprecated('Use mixinElementDescriptor instead')
+const MixinElement$json = const {
+  '1': 'MixinElement',
+  '2': const [
+    const {'1': 'is_base', '3': 1, '4': 1, '5': 8, '10': 'isBase'},
+  ],
+};
+
+/// Descriptor for `MixinElement`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mixinElementDescriptor = $convert.base64Decode('CgxNaXhpbkVsZW1lbnQSFwoHaXNfYmFzZRgBIAEoCFIGaXNCYXNl');
 @$core.Deprecated('Use constructorElementDescriptor instead')
 const ConstructorElement$json = const {
   '1': 'ConstructorElement',

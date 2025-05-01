@@ -32,11 +32,16 @@ message DartType {
     DynamicType dynamic_type = 22;
     FunctionType function_type = 23;
     ParameterizedType parameterized_type = 24;
+    VoidType void_type = 25;
   }
 }
 
 message DynamicType {
   
+}
+
+message VoidType {
+
 }
 
 message FunctionType {
@@ -63,31 +68,46 @@ message ParameterElement {
 
 message Element{
   oneof element {
-    ClassElement class = 1;
+    InterfaceElement class = 1;
     FunctionElement function = 2;
   }
 }
 
-message ClassElement{
+message InterfaceElement{
   Identifier identifier = 1;
-  bool is_abstract = 2;
-  bool is_base = 3;
-  bool is_final = 4;
-  bool is_interface = 5;
-  bool is_mixin = 6;
-  bool is_sealed = 7;
-  repeated Identifier interfaces = 8;
-  repeated Identifier mixins = 9;
-  Identifier super_class = 10;
-  repeated ConstructorElement constructors = 11;
-  repeated FieldElement fields = 12;
-  repeated FunctionElement methods = 13;
-  repeated FieldElement getters = 14;
-  repeated FieldElement setters = 15;
-  repeated FieldElement static_fields = 16;
-  repeated FunctionElement static_methods = 17;
-  repeated FieldElement static_getters = 18;
-  repeated FieldElement static_setters = 19;
+  repeated Identifier interfaces = 2;
+  repeated Identifier mixins = 3;
+  Identifier super_class = 4;
+  repeated ConstructorElement constructors = 5;
+  repeated FieldElement fields = 6;
+  repeated FunctionElement methods = 7;
+  repeated FieldElement getters = 8;
+  repeated FieldElement setters = 9;
+  repeated FieldElement static_fields = 10;
+  repeated FunctionElement static_methods = 11;
+  repeated FieldElement static_getters = 12;
+  repeated FieldElement static_setters = 13;
+  oneof element {
+    ClassElement class = 14;
+    EnumElement enum = 15;
+    MixinElement mixin = 16;
+  }
+}
+
+message ClassElement{
+  bool is_abstract = 1;
+  bool is_base = 2;
+  bool is_final = 3;
+  bool is_interface = 4;
+  bool is_mixin = 5;
+  bool is_sealed = 6;
+}
+
+message EnumElement{
+}
+
+message MixinElement{
+  bool is_base = 1;
 }
 
 message ConstructorElement{
