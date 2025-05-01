@@ -798,32 +798,32 @@ class ParameterElement extends $pb.GeneratedMessage {
 }
 
 enum Element_Element {
-  class_1, 
+  interface, 
   function, 
   notSet
 }
 
 class Element extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, Element_Element> _Element_ElementByTag = {
-    1 : Element_Element.class_1,
+    1 : Element_Element.interface,
     2 : Element_Element.function,
     0 : Element_Element.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Element', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<InterfaceElement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'class', subBuilder: InterfaceElement.create)
+    ..aOM<InterfaceElement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'interface', subBuilder: InterfaceElement.create)
     ..aOM<FunctionElement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: FunctionElement.create)
     ..hasRequiredFields = false
   ;
 
   Element._() : super();
   factory Element({
-    InterfaceElement? class_1,
+    InterfaceElement? interface,
     FunctionElement? function,
   }) {
     final _result = create();
-    if (class_1 != null) {
-      _result.class_1 = class_1;
+    if (interface != null) {
+      _result.interface = interface;
     }
     if (function != null) {
       _result.function = function;
@@ -855,15 +855,15 @@ class Element extends $pb.GeneratedMessage {
   void clearElement() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  InterfaceElement get class_1 => $_getN(0);
+  InterfaceElement get interface => $_getN(0);
   @$pb.TagNumber(1)
-  set class_1(InterfaceElement v) { setField(1, v); }
+  set interface(InterfaceElement v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasClass_1() => $_has(0);
+  $core.bool hasInterface() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClass_1() => clearField(1);
+  void clearInterface() => clearField(1);
   @$pb.TagNumber(1)
-  InterfaceElement ensureClass_1() => $_ensure(0);
+  InterfaceElement ensureInterface() => $_ensure(0);
 
   @$pb.TagNumber(2)
   FunctionElement get function => $_getN(1);

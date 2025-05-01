@@ -125,7 +125,7 @@ final $typed_data.Uint8List parameterElementDescriptor = $convert.base64Decode('
 const Element$json = const {
   '1': 'Element',
   '2': const [
-    const {'1': 'class', '3': 1, '4': 1, '5': 11, '6': '.schema.InterfaceElement', '9': 0, '10': 'class'},
+    const {'1': 'interface', '3': 1, '4': 1, '5': 11, '6': '.schema.InterfaceElement', '9': 0, '10': 'interface'},
     const {'1': 'function', '3': 2, '4': 1, '5': 11, '6': '.schema.FunctionElement', '9': 0, '10': 'function'},
   ],
   '8': const [
@@ -134,7 +134,7 @@ const Element$json = const {
 };
 
 /// Descriptor for `Element`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List elementDescriptor = $convert.base64Decode('CgdFbGVtZW50EjAKBWNsYXNzGAEgASgLMhguc2NoZW1hLkludGVyZmFjZUVsZW1lbnRIAFIFY2xhc3MSNQoIZnVuY3Rpb24YAiABKAsyFy5zY2hlbWEuRnVuY3Rpb25FbGVtZW50SABSCGZ1bmN0aW9uQgkKB2VsZW1lbnQ=');
+final $typed_data.Uint8List elementDescriptor = $convert.base64Decode('CgdFbGVtZW50EjgKCWludGVyZmFjZRgBIAEoCzIYLnNjaGVtYS5JbnRlcmZhY2VFbGVtZW50SABSCWludGVyZmFjZRI1CghmdW5jdGlvbhgCIAEoCzIXLnNjaGVtYS5GdW5jdGlvbkVsZW1lbnRIAFIIZnVuY3Rpb25CCQoHZWxlbWVudA==');
 @$core.Deprecated('Use interfaceElementDescriptor instead')
 const InterfaceElement$json = const {
   '1': 'InterfaceElement',

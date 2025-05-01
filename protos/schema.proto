@@ -37,7 +37,7 @@ message DartType {
 }
 
 message DynamicType {
-  
+
 }
 
 message VoidType {
@@ -68,7 +68,7 @@ message ParameterElement {
 
 message Element{
   oneof element {
-    InterfaceElement class = 1;
+    InterfaceElement interface = 1;
     FunctionElement function = 2;
   }
 }
