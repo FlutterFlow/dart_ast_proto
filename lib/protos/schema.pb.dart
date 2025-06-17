@@ -1567,7 +1567,7 @@ class LibraryElement extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LibraryElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uri')
     ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'importedLibraries')
-    ..pPS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exportedLibraries')
+    ..pc<LibraryExportElement>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exportedLibraries', $pb.PbFieldType.PM, subBuilder: LibraryExportElement.create)
     ..pc<Element>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topLevelElements', $pb.PbFieldType.PM, subBuilder: Element.create)
     ..hasRequiredFields = false
   ;
@@ -1576,7 +1576,7 @@ class LibraryElement extends $pb.GeneratedMessage {
   factory LibraryElement({
     $core.String? uri,
     $core.Iterable<$core.String>? importedLibraries,
-    $core.Iterable<$core.String>? exportedLibraries,
+    $core.Iterable<LibraryExportElement>? exportedLibraries,
     $core.Iterable<Element>? topLevelElements,
   }) {
     final _result = create();
@@ -1628,9 +1628,72 @@ class LibraryElement extends $pb.GeneratedMessage {
   $core.List<$core.String> get importedLibraries => $_getList(1);
 
   @$pb.TagNumber(3)
-  $core.List<$core.String> get exportedLibraries => $_getList(2);
+  $core.List<LibraryExportElement> get exportedLibraries => $_getList(2);
 
   @$pb.TagNumber(4)
   $core.List<Element> get topLevelElements => $_getList(3);
+}
+
+class LibraryExportElement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LibraryExportElement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'schema'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uri')
+    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showNames')
+    ..pPS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hideNames')
+    ..hasRequiredFields = false
+  ;
+
+  LibraryExportElement._() : super();
+  factory LibraryExportElement({
+    $core.String? uri,
+    $core.Iterable<$core.String>? showNames,
+    $core.Iterable<$core.String>? hideNames,
+  }) {
+    final _result = create();
+    if (uri != null) {
+      _result.uri = uri;
+    }
+    if (showNames != null) {
+      _result.showNames.addAll(showNames);
+    }
+    if (hideNames != null) {
+      _result.hideNames.addAll(hideNames);
+    }
+    return _result;
+  }
+  factory LibraryExportElement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory LibraryExportElement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  LibraryExportElement clone() => LibraryExportElement()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  LibraryExportElement copyWith(void Function(LibraryExportElement) updates) => super.copyWith((message) => updates(message as LibraryExportElement)) as LibraryExportElement; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static LibraryExportElement create() => LibraryExportElement._();
+  LibraryExportElement createEmptyInstance() => create();
+  static $pb.PbList<LibraryExportElement> createRepeated() => $pb.PbList<LibraryExportElement>();
+  @$core.pragma('dart2js:noInline')
+  static LibraryExportElement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LibraryExportElement>(create);
+  static LibraryExportElement? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uri => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uri($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUri() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUri() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get showNames => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get hideNames => $_getList(2);
 }
 

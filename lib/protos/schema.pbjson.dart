@@ -241,10 +241,22 @@ const LibraryElement$json = const {
   '2': const [
     const {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
     const {'1': 'imported_libraries', '3': 2, '4': 3, '5': 9, '10': 'importedLibraries'},
-    const {'1': 'exported_libraries', '3': 3, '4': 3, '5': 9, '10': 'exportedLibraries'},
+    const {'1': 'exported_libraries', '3': 3, '4': 3, '5': 11, '6': '.schema.LibraryExportElement', '10': 'exportedLibraries'},
     const {'1': 'top_level_elements', '3': 4, '4': 3, '5': 11, '6': '.schema.Element', '10': 'topLevelElements'},
   ],
 };
 
 /// Descriptor for `LibraryElement`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List libraryElementDescriptor = $convert.base64Decode('Cg5MaWJyYXJ5RWxlbWVudBIQCgN1cmkYASABKAlSA3VyaRItChJpbXBvcnRlZF9saWJyYXJpZXMYAiADKAlSEWltcG9ydGVkTGlicmFyaWVzEi0KEmV4cG9ydGVkX2xpYnJhcmllcxgDIAMoCVIRZXhwb3J0ZWRMaWJyYXJpZXMSPQoSdG9wX2xldmVsX2VsZW1lbnRzGAQgAygLMg8uc2NoZW1hLkVsZW1lbnRSEHRvcExldmVsRWxlbWVudHM=');
+final $typed_data.Uint8List libraryElementDescriptor = $convert.base64Decode('Cg5MaWJyYXJ5RWxlbWVudBIQCgN1cmkYASABKAlSA3VyaRItChJpbXBvcnRlZF9saWJyYXJpZXMYAiADKAlSEWltcG9ydGVkTGlicmFyaWVzEksKEmV4cG9ydGVkX2xpYnJhcmllcxgDIAMoCzIcLnNjaGVtYS5MaWJyYXJ5RXhwb3J0RWxlbWVudFIRZXhwb3J0ZWRMaWJyYXJpZXMSPQoSdG9wX2xldmVsX2VsZW1lbnRzGAQgAygLMg8uc2NoZW1hLkVsZW1lbnRSEHRvcExldmVsRWxlbWVudHM=');
+@$core.Deprecated('Use libraryExportElementDescriptor instead')
+const LibraryExportElement$json = const {
+  '1': 'LibraryExportElement',
+  '2': const [
+    const {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+    const {'1': 'show_names', '3': 2, '4': 3, '5': 9, '10': 'showNames'},
+    const {'1': 'hide_names', '3': 3, '4': 3, '5': 9, '10': 'hideNames'},
+  ],
+};
+
+/// Descriptor for `LibraryExportElement`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List libraryExportElementDescriptor = $convert.base64Decode('ChRMaWJyYXJ5RXhwb3J0RWxlbWVudBIQCgN1cmkYASABKAlSA3VyaRIdCgpzaG93X25hbWVzGAIgAygJUglzaG93TmFtZXMSHQoKaGlkZV9uYW1lcxgDIAMoCVIJaGlkZU5hbWVz');
