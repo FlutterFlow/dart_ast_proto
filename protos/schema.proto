@@ -135,12 +135,6 @@ message FunctionElement{
 message LibraryElement{
   string uri = 1;
   repeated string imported_libraries = 2;
-  repeated LibraryExportElement exported_libraries = 3;
+  repeated string exported_libraries = 3;
   repeated Element top_level_elements = 4;
-}
-
-message LibraryExportElement{
-  string uri = 1;
-  repeated string show_names = 2;
-  repeated string hide_names = 3;
 }
